@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Document card</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--ypz-paper);font-family:var(--ypz-font-body);color:var(--ypz-ink)}
+  .wrap{padding:18px 24px}
+  .doc{background:#fff;border:1px solid var(--ypz-steel-200);border-radius:2px;box-shadow:0 1px 0 0 rgba(14,15,17,.04), 0 1px 2px rgba(14,15,17,.06);position:relative}
+  .doc.active{border-top:4px solid var(--ypz-orange);border-radius:0 0 2px 2px}
+  .head{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--ypz-steel-200);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ypz-ink-3)}
+  .head .l{font-family:'Space Grotesk';font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ypz-ink)}
+  .body{padding:14px}
+  .row{display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:12px;padding:4px 0;border-bottom:1px dotted var(--ypz-steel-200)}
+  .row:last-child{border-bottom:0}
+  .row .k{font-family:'Space Grotesk';font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ypz-ink-3)}
+  .crosshair{position:absolute;width:10px;height:10px;opacity:.3}
+  .crosshair.tl{top:6px;left:6px} .crosshair.tr{top:6px;right:6px}
+  .crosshair.bl{bottom:6px;left:6px} .crosshair.br{bottom:6px;right:6px}
+</style></head>
+<body><div class="wrap">
+<div class="doc active">
+  <img class="crosshair tl" src="../assets/crosshair.svg"><img class="crosshair br" src="../assets/crosshair.svg">
+  <div class="head"><span class="l">Active Transfer</span><span>T-8821-04A</span></div>
+  <div class="body">
+    <div class="row"><span class="k">Custodian</span><span>OP-04823 · J. Alvarez</span></div>
+    <div class="row"><span class="k">Quantity</span><span>2.450 kg <span style="color:var(--ypz-ink-3)">±0.002</span></span></div>
+    <div class="row"><span class="k">Jurisdiction</span><span>US-NM-Doña Ana</span></div>
+    <div class="row"><span class="k">Sealed</span><span>2026-05-09 14:32:08 UTC</span></div>
+  </div>
+</div>
+</div></body></html>

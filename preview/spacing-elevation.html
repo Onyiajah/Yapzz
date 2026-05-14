@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Elevation</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--ypz-paper);font-family:var(--ypz-font-body)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ypz-steel-200);height:200px}
+  .cell{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px 16px;border-right:1px solid var(--ypz-steel-200);background:var(--ypz-paper)}
+  .cell:last-child{border-right:0}
+  .box{width:120px;height:64px;background:#fff;border:1px solid var(--ypz-steel-200);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--ypz-font-mono);font-size:11px;color:var(--ypz-ink-3)}
+  .box.s1{box-shadow:0 1px 0 0 rgba(14,15,17,.04), 0 1px 2px rgba(14,15,17,.06)}
+  .box.s2{box-shadow:0 6px 20px -8px rgba(14,15,17,.18), 0 2px 4px rgba(14,15,17,.06)}
+  .box.s3{box-shadow:0 24px 48px -16px rgba(14,15,17,.30), 0 4px 8px rgba(14,15,17,.08)}
+  .name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;color:var(--ypz-ink)}
+  .spec{font-family:var(--ypz-font-mono);font-size:10px;color:var(--ypz-ink-3);text-align:center;letter-spacing:.04em}
+</style></head>
+<body><div class="grid">
+  <div class="cell"><div class="box s1">resting card</div><div><div class="name">Shadow 1</div><div class="spec">cards · rows</div></div></div>
+  <div class="cell"><div class="box s2">menu / popover</div><div><div class="name">Shadow 2</div><div class="spec">menus · dropdowns</div></div></div>
+  <div class="cell"><div class="box s3">modal sheet</div><div><div class="name">Shadow 3</div><div class="spec">modals · dialogs</div></div></div>
+</div></body></html>

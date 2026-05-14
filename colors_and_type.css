@@ -1,0 +1,267 @@
+/* ============================================================
+   YapzZ Design System — Tokens
+   colors_and_type.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- COLOR — base ---------- */
+  --ypz-paper:          #FAF7F2;   /* primary surface — warm off-white */
+  --ypz-paper-2:        #F2EEE6;   /* hover surface, table zebra */
+  --ypz-paper-3:        #E8E2D6;   /* pressed surface */
+  --ypz-white:          #FFFFFF;   /* card fill, modal sheet */
+
+  --ypz-ink:            #0E0F11;   /* primary type + rule color */
+  --ypz-ink-2:          #2A2C30;   /* secondary type */
+  --ypz-ink-3:          #5A5E66;   /* tertiary type, captions */
+
+  /* ---------- COLOR — steel grays (borders, dividers, disabled) ---------- */
+  --ypz-steel-50:       #F5F4F1;
+  --ypz-steel-100:      #E7E4DD;
+  --ypz-steel-200:      #D2CEC4;
+  --ypz-steel-300:      #B5B0A4;
+  --ypz-steel-400:      #8E8A80;
+  --ypz-steel-500:      #6B6860;
+  --ypz-steel-600:      #4A4842;
+  --ypz-steel-700:      #2E2D29;
+
+  /* ---------- COLOR — signal orange ---------- */
+  --ypz-orange:         #F27F0D;   /* brand primary */
+  --ypz-orange-600:     #D86E07;   /* hover */
+  --ypz-orange-700:     #B95C04;   /* press */
+  --ypz-orange-300:     #FFB36A;   /* tints */
+  --ypz-orange-100:     #FFE4C4;   /* tint backgrounds */
+  --ypz-orange-50:      #FFF4E4;   /* lightest tint */
+
+  /* ---------- COLOR — status (saturated, earthy) ---------- */
+  --ypz-approved:       #1F8A5B;
+  --ypz-approved-tint:  #DCEFE3;
+  --ypz-blocked:        #C8321F;
+  --ypz-blocked-tint:   #F6DDD8;
+  --ypz-warning:        #E0A815;
+  --ypz-warning-tint:   #FBEFCB;
+  --ypz-info:           #2A5FB8;
+  --ypz-info-tint:      #DCE6F4;
+  --ypz-sealed:         #4A2A8E;       /* purple — used only for "SEALED" stamp + immutable records */
+  --ypz-sealed-tint:    #E5DEF1;
+
+  /* ---------- COLOR — semantic foreground / background ---------- */
+  --ypz-fg-1:           var(--ypz-ink);
+  --ypz-fg-2:           var(--ypz-ink-2);
+  --ypz-fg-3:           var(--ypz-ink-3);
+  --ypz-fg-disabled:    var(--ypz-steel-300);
+  --ypz-fg-onorange:    var(--ypz-white);
+
+  --ypz-bg:             var(--ypz-paper);
+  --ypz-bg-card:        var(--ypz-white);
+  --ypz-bg-inset:       var(--ypz-paper-2);
+  --ypz-bg-overlay:     rgba(14, 15, 17, 0.60);
+
+  --ypz-border:         var(--ypz-steel-200);
+  --ypz-border-strong:  var(--ypz-steel-400);
+  --ypz-border-ink:     var(--ypz-ink);
+
+  --ypz-accent:         var(--ypz-orange);
+  --ypz-accent-hover:   var(--ypz-orange-600);
+  --ypz-accent-press:   var(--ypz-orange-700);
+
+  /* ---------- TYPE — families ---------- */
+  --ypz-font-display:   'Space Grotesk', 'Helvetica Neue', sans-serif;
+  --ypz-font-body:      'IBM Plex Sans', 'Helvetica Neue', sans-serif;
+  --ypz-font-mono:      'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ---------- TYPE — sizes (1.2× scale, dense) ---------- */
+  --ypz-text-3xs:       10px;
+  --ypz-text-2xs:       11px;
+  --ypz-text-xs:        12px;
+  --ypz-text-sm:        13px;
+  --ypz-text-base:      14px;
+  --ypz-text-md:        16px;
+  --ypz-text-lg:        18px;
+  --ypz-text-xl:        22px;
+  --ypz-text-2xl:       28px;
+  --ypz-text-3xl:       36px;
+  --ypz-text-4xl:       48px;
+  --ypz-text-5xl:       64px;
+  --ypz-text-6xl:       84px;
+
+  /* ---------- TYPE — weights ---------- */
+  --ypz-weight-regular: 400;
+  --ypz-weight-medium:  500;
+  --ypz-weight-semi:    600;
+  --ypz-weight-bold:    700;
+
+  /* ---------- TYPE — leading ---------- */
+  --ypz-lh-tight:       1.05;
+  --ypz-lh-snug:        1.2;
+  --ypz-lh-body:        1.45;
+  --ypz-lh-loose:       1.6;
+
+  /* ---------- TYPE — tracking ---------- */
+  --ypz-track-tight:    -0.01em;
+  --ypz-track-normal:   0em;
+  --ypz-track-loose:    0.04em;
+  --ypz-track-label:    0.08em;     /* ALL-CAPS labels */
+
+  /* ---------- SPACING (4px base) ---------- */
+  --ypz-space-0:        0px;
+  --ypz-space-1:        4px;
+  --ypz-space-2:        8px;
+  --ypz-space-3:        12px;
+  --ypz-space-4:        16px;
+  --ypz-space-5:        20px;
+  --ypz-space-6:        24px;
+  --ypz-space-8:        32px;
+  --ypz-space-10:       40px;
+  --ypz-space-12:       48px;
+  --ypz-space-16:       64px;
+  --ypz-space-20:       80px;
+  --ypz-space-24:       96px;
+
+  /* ---------- RADIUS ---------- */
+  --ypz-radius-0:       0px;       /* tables, cells, stamps, fields */
+  --ypz-radius-1:       2px;       /* cards */
+  --ypz-radius-2:       4px;       /* buttons */
+  --ypz-radius-pill:    999px;     /* chips, badges */
+
+  /* ---------- BORDER WIDTHS ---------- */
+  --ypz-border-1:       1px;       /* hairline — default */
+  --ypz-border-2:       2px;       /* emphasis */
+  --ypz-border-4:       4px;       /* tick marks, active card top band */
+
+  /* ---------- SHADOWS ---------- */
+  --ypz-shadow-0:       none;
+  --ypz-shadow-1:       0 1px 0 0 rgba(14,15,17,0.04), 0 1px 2px rgba(14,15,17,0.06);
+  --ypz-shadow-2:       0 6px 20px -8px rgba(14,15,17,0.18), 0 2px 4px rgba(14,15,17,0.06);
+  --ypz-shadow-3:       0 24px 48px -16px rgba(14,15,17,0.30), 0 4px 8px rgba(14,15,17,0.08);
+
+  /* ---------- MOTION ---------- */
+  --ypz-ease:           cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ypz-dur-fast:       120ms;
+  --ypz-dur-base:       200ms;
+  --ypz-dur-slow:       320ms;
+
+  /* ---------- LAYOUT ---------- */
+  --ypz-topbar-h:       48px;
+  --ypz-rail-w:         220px;
+  --ypz-statusbar-h:    24px;
+  --ypz-row-h:          36px;
+  --ypz-row-h-condensed: 28px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Use these utility classes to opt into the system.
+   ============================================================ */
+
+.ypz-display-1,
+.ypz-display-2,
+.ypz-display-3,
+.ypz-h1, .ypz-h2, .ypz-h3, .ypz-h4,
+.ypz-eyebrow,
+.ypz-label,
+.ypz-stamp {
+  font-family: var(--ypz-font-display);
+  color: var(--ypz-fg-1);
+}
+
+.ypz-display-1 {
+  font-size: var(--ypz-text-6xl);
+  font-weight: var(--ypz-weight-medium);
+  line-height: var(--ypz-lh-tight);
+  letter-spacing: var(--ypz-track-tight);
+}
+.ypz-display-2 {
+  font-size: var(--ypz-text-5xl);
+  font-weight: var(--ypz-weight-medium);
+  line-height: var(--ypz-lh-tight);
+  letter-spacing: var(--ypz-track-tight);
+}
+.ypz-display-3 {
+  font-size: var(--ypz-text-4xl);
+  font-weight: var(--ypz-weight-semi);
+  line-height: var(--ypz-lh-snug);
+  letter-spacing: var(--ypz-track-tight);
+}
+
+.ypz-h1 { font-size: var(--ypz-text-3xl); font-weight: var(--ypz-weight-semi); line-height: var(--ypz-lh-snug); }
+.ypz-h2 { font-size: var(--ypz-text-2xl); font-weight: var(--ypz-weight-semi); line-height: var(--ypz-lh-snug); }
+.ypz-h3 { font-size: var(--ypz-text-xl); font-weight: var(--ypz-weight-semi); line-height: var(--ypz-lh-snug); }
+.ypz-h4 { font-size: var(--ypz-text-lg); font-weight: var(--ypz-weight-medium); line-height: var(--ypz-lh-snug); }
+
+.ypz-body, p.ypz-p {
+  font-family: var(--ypz-font-body);
+  font-size: var(--ypz-text-base);
+  font-weight: var(--ypz-weight-regular);
+  line-height: var(--ypz-lh-body);
+  color: var(--ypz-fg-1);
+}
+.ypz-body-sm {
+  font-family: var(--ypz-font-body);
+  font-size: var(--ypz-text-sm);
+  line-height: var(--ypz-lh-body);
+  color: var(--ypz-fg-2);
+}
+.ypz-caption {
+  font-family: var(--ypz-font-body);
+  font-size: var(--ypz-text-xs);
+  line-height: var(--ypz-lh-body);
+  color: var(--ypz-fg-3);
+}
+
+.ypz-eyebrow,
+.ypz-label {
+  font-size: var(--ypz-text-2xs);
+  font-weight: var(--ypz-weight-semi);
+  letter-spacing: var(--ypz-track-label);
+  text-transform: uppercase;
+  color: var(--ypz-fg-2);
+}
+.ypz-eyebrow { color: var(--ypz-orange); }
+
+.ypz-stamp {
+  font-family: var(--ypz-font-display);
+  font-size: var(--ypz-text-md);
+  font-weight: var(--ypz-weight-bold);
+  letter-spacing: var(--ypz-track-label);
+  text-transform: uppercase;
+}
+
+/* Mono — code, IDs, hashes, timestamps */
+.ypz-mono, code.ypz-code, .ypz-id, .ypz-hash, .ypz-time {
+  font-family: var(--ypz-font-mono);
+  font-size: var(--ypz-text-sm);
+  font-weight: var(--ypz-weight-regular);
+  letter-spacing: 0;
+  color: var(--ypz-fg-1);
+}
+.ypz-mono-sm { font-family: var(--ypz-font-mono); font-size: var(--ypz-text-xs); color: var(--ypz-fg-2); }
+
+/* Section heading w/ orange underline rule */
+.ypz-section-title {
+  font-family: var(--ypz-font-display);
+  font-weight: var(--ypz-weight-semi);
+  font-size: var(--ypz-text-xl);
+  line-height: var(--ypz-lh-snug);
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--ypz-orange);
+}
+
+/* ============================================================
+   GLOBAL DEFAULTS (opt-in via .ypz-root)
+   ============================================================ */
+
+.ypz-root {
+  font-family: var(--ypz-font-body);
+  font-size: var(--ypz-text-base);
+  line-height: var(--ypz-lh-body);
+  color: var(--ypz-fg-1);
+  background: var(--ypz-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.ypz-root *,
+.ypz-root *::before,
+.ypz-root *::after { box-sizing: border-box; }

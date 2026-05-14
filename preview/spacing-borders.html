@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Borders & rules</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--ypz-paper);font-family:var(--ypz-font-body);color:var(--ypz-ink)}
+  .card{padding:22px 28px;display:flex;flex-direction:column;gap:18px}
+  .meta{font-family:var(--ypz-font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ypz-ink-3)}
+  .hairline{height:1px;background:var(--ypz-steel-200)}
+  .ink-rule{height:1px;background:var(--ypz-ink)}
+  .double{display:flex;align-items:center;gap:10px}
+  .tick{width:32px;height:4px;background:var(--ypz-orange);flex-shrink:0}
+  .heading{font-family:'Space Grotesk';font-weight:600;font-size:18px;display:inline-block;padding-bottom:4px;border-bottom:2px solid var(--ypz-orange)}
+  .row{display:flex;align-items:center;gap:14px;font-family:var(--ypz-font-mono);font-size:11px;color:var(--ypz-ink-3)}
+  .row .label{width:140px;color:var(--ypz-ink);font-family:'Space Grotesk';font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+</style></head>
+<body><div class="card">
+  <div class="row"><div class="label">Hairline</div><div class="hairline" style="flex:1"></div><span>1 px · steel-200</span></div>
+  <div class="row"><div class="label">Ink rule</div><div class="ink-rule" style="flex:1"></div><span>1 px · ink</span></div>
+  <div class="row"><div class="label">Section + tick</div><div class="double" style="flex:1"><div class="tick"></div><div class="hairline" style="flex:1"></div></div><span>4×4 + hairline</span></div>
+  <div class="row"><div class="label">Heading rule</div><div style="flex:1"><span class="heading">Active Transfers</span></div><span>2 px orange</span></div>
+</div></body></html>

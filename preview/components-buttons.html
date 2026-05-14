@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;padding:0;background:var(--ypz-paper);font-family:var(--ypz-font-body);color:var(--ypz-ink)}
+  .card{padding:24px 28px;display:flex;flex-direction:column;gap:18px}
+  .meta{font-family:var(--ypz-font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ypz-ink-3)}
+  .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .btn{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;letter-spacing:.02em;line-height:1;padding:10px 16px;border-radius:4px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .12s var(--ypz-ease),color .12s var(--ypz-ease)}
+  .btn.primary{background:#F27F0D;color:#fff}
+  .btn.primary:hover{background:#D86E07}
+  .btn.ink{background:#0E0F11;color:#FAF7F2}
+  .btn.outline{background:transparent;color:var(--ypz-ink);border-color:var(--ypz-ink)}
+  .btn.outline:hover{background:var(--ypz-paper-2)}
+  .btn.ghost{background:transparent;color:var(--ypz-ink);border-color:transparent}
+  .btn.ghost:hover{background:var(--ypz-paper-2)}
+  .btn.danger{background:#C8321F;color:#fff}
+  .btn.disabled{background:var(--ypz-steel-100);color:var(--ypz-steel-400);cursor:not-allowed;border-color:var(--ypz-steel-200)}
+  .btn.icon-only{padding:10px;width:34px;height:34px;justify-content:center}
+  .arr{font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1}
+</style></head>
+<body><div class="card">
+  <div class="meta">primary actions</div>
+  <div class="row">
+    <button class="btn primary">Approve Transfer <span class="arr">→</span></button>
+    <button class="btn ink">Seal Record</button>
+    <button class="btn outline">View Manifest</button>
+    <button class="btn ghost">Cancel</button>
+    <button class="btn danger">Block Action</button>
+  </div>
+  <div class="meta">states</div>
+  <div class="row">
+    <button class="btn primary">Default</button>
+    <button class="btn primary" style="background:#D86E07">Hover</button>
+    <button class="btn primary" style="background:#B95C04;transform:translateY(1px)">Press</button>
+    <button class="btn disabled">Disabled</button>
+    <button class="btn ink icon-only">+</button>
+  </div>
+</div></body></html>
