@@ -603,118 +603,6 @@
     70% { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
     100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
   }
-  @media (max-width: 600px) {
-    .float-cta { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 13px; }
-
-    /* Header — tighten gap, drop Sign in so the orange CTA fits on one row */
-    .nav { gap: 14px; height: 68px; }
-    .brand img { height: 26px; }
-    .sign-in { display: none; }
-    .pill-btn { padding: 9px 16px; font-size: 13px; }
-    .pill-btn.lg { padding: 12px 22px; font-size: 14px; }
-
-    /* Hero */
-    .hero-section { padding: 0 16px 40px; }
-    .hero-grid { padding: 24px 0 16px; gap: 40px; min-height: auto; }
-    .hero-copy h1 { margin-bottom: 20px; }
-    .hero-copy .lede { font-size: 17px; margin-bottom: 28px; }
-    .hero-actions { gap: 10px; }
-    .btn-outline { padding: 11px 20px; }
-
-    /* Hero media cards — slimmer proportions so they don't feel chunky on phone */
-    .media-wrap { height: 340px; }
-    .media-card.top { width: 56%; top: 0; right: 8%; }
-    .media-card.bottom { width: 70%; bottom: -16px; right: 0; }
-    .notif { padding: 5px 12px 5px 5px; gap: 8px; }
-    .notif .ic { width: 26px; height: 26px; }
-    .notif .ic svg { width: 13px; height: 13px; }
-    .notif .t { font-size: 11px; }
-    .notif .s { font-size: 9px; }
-    .notif .v { font-size: 11px; margin-left: 4px; padding-left: 8px; }
-    .notif.one { top: 12px; left: 8px; }
-    .notif.two { left: 4px; bottom: 24px; }
-
-    /* Trust band + stats */
-    .trust { padding: 40px 16px 56px; }
-    .trust-row { gap: 18px 28px; font-size: 13px; margin-bottom: 36px; }
-    .stats { grid-template-columns: 1fr; grid-template-rows: auto; gap: 14px; }
-    .stats .card.cost,
-    .stats .card.tx,
-    .stats .card.validators,
-    .stats .card.addresses {
-      grid-column: 1; grid-row: auto; max-width: none;
-    }
-    .stats .card { padding: 20px 18px; }
-    .stats .card .value { white-space: nowrap; }
-    .stats .card.cost { padding: 18px 20px; gap: 16px; }
-    .stats .card.cost .value { font-size: 34px; }
-    .stats .card.tx { padding: 20px 18px; min-height: 170px; }
-    .stats .card.tx .value { font-size: 40px; margin-top: 8px; letter-spacing: -.045em; }
-    .stats .card.validators { min-height: 260px; padding: 20px 18px; }
-    .stats .card.validators .value { font-size: 52px; }
-    .stats .card.addresses { min-height: 210px; padding: 20px 18px; }
-    .stats .card.addresses .value { font-size: 40px; }
-    .stats .card.addresses .planet { width: 160px; height: 160px; top: 24px; right: -36px; }
-
-    /* Features */
-    .features { padding: 56px 16px; }
-    .features-grid { gap: 16px; margin-top: 32px; }
-    .feature { padding: 22px; }
-    .feature-t { font-size: 19px; }
-
-    /* Architecture */
-    .architecture { padding: 56px 16px; }
-    .architecture-grid { gap: 40px; }
-    .architecture-visual { min-height: 240px; }
-
-    /* Use cases */
-    .use-cases { padding: 48px 16px; }
-    .uc-detail { gap: 16px; }
-    .uc-detail-icon { width: 32px; height: 32px; }
-    .uc-detail-text { font-size: 17px; }
-    .uc-card { min-height: 320px; border-radius: 24px; }
-    .uc-card .overlay { padding: 24px 22px 22px; }
-    .uc-card .uc-logo { font-size: 26px; margin-bottom: 12px; }
-    .uc-card .uc-blurb { font-size: 14px; }
-
-    /* Industries — tighten tab rail + img padding */
-    .industries-left { padding: 48px 20px; }
-    .ind-tab { grid-template-columns: 20px 1fr; gap: 14px; }
-    .ind-tab-icon { transform: rotate(45deg) scale(0.85); margin-bottom: 10px; }
-    .ind-tab-title { font-size: 18px; }
-    .ind-tab.is-active .ind-tab-title { font-size: 22px; }
-    .ind-tab-desc { font-size: 15px; max-height: 0; }
-    .ind-tab.is-active .ind-tab-desc { max-height: 400px; margin-top: 18px; }
-    .industries-right { min-height: 260px; margin: 0 16px 32px; border-radius: 18px; }
-
-    /* Benefits + Pilot */
-    .benefits-band { padding: 0 16px 56px; }
-    .pilot-card { border-radius: 18px; }
-    .pilot-copy { padding: 32px 22px 28px; }
-    .pilot-copy p { font-size: 16px; margin-bottom: 24px; }
-    .pilot-cta { padding: 12px 24px; font-size: 14px; }
-    .pilot-media { min-height: 220px; }
-
-    /* Prism / Why */
-    .prism { padding: 48px 0; min-height: auto; }
-    .vm-card { padding: 28px 24px 30px; }
-    .why { padding: 56px 0 72px; }
-    .why-grid { gap: 24px; }
-    .why-art { width: 340px; height: 340px; right: -200px; top: -80px; opacity: 0.55; }
-    .why-art-2 { width: 200px; height: 200px; opacity: 0.3; }
-    .why-list { gap: 18px; margin-bottom: 32px; }
-
-    /* CTA band */
-    .cta { margin: 72px 16px; padding: 40px 24px; gap: 24px; }
-    .cta-actions { width: 100%; flex-direction: column; gap: 10px; }
-    .cta .pill-btn, .cta .ghost { width: 100%; justify-content: center; text-align: center; }
-
-    /* Footer */
-    footer { padding: 40px 16px 24px; }
-    .foot { grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 28px; }
-    .foot-bot { font-size: 11px; gap: 8px; flex-direction: column; }
-  }
-
   /* CTA band — light, on-brand */
   .cta {
     margin: 160px 32px 160px;
@@ -1366,6 +1254,123 @@
     .why-art { width: 480px; height: 480px; right: -180px; top: -120px; opacity: 0.6; }
     .why-art-2 { width: 260px; height: 260px; opacity: 0.35; }
     .why h2 { font-size: clamp(32px, 8vw, 44px); }
+  }
+
+  /* Phone breakpoint — placed LAST so it overrides all max-width: 980px rules above */
+  @media (max-width: 600px) {
+    .float-cta { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 13px; }
+
+    /* Header */
+    .nav { gap: 14px; height: 68px; }
+    .brand img { height: 26px; }
+    .sign-in { display: none; }
+    .pill-btn { padding: 9px 16px; font-size: 13px; }
+    .pill-btn.lg { padding: 12px 22px; font-size: 14px; }
+
+    /* Hero */
+    .hero-section { padding: 0 16px 40px; }
+    .hero-grid { padding: 24px 0 16px; gap: 40px; min-height: auto; }
+    .hero-copy h1 { margin-bottom: 20px; }
+    .hero-copy .lede { font-size: 17px; margin-bottom: 28px; }
+    .hero-actions { gap: 10px; }
+    .btn-outline { padding: 11px 20px; }
+
+    /* Hero media cards */
+    .media-wrap { height: 340px; }
+    .media-card.top { width: 56%; top: 0; right: 8%; }
+    .media-card.bottom { width: 70%; bottom: -16px; right: 0; }
+    .notif { padding: 5px 12px 5px 5px; gap: 8px; }
+    .notif .ic { width: 26px; height: 26px; }
+    .notif .ic svg { width: 13px; height: 13px; }
+    .notif .t { font-size: 11px; }
+    .notif .s { font-size: 9px; }
+    .notif .v { font-size: 11px; margin-left: 4px; padding-left: 8px; }
+    .notif.one { top: 12px; left: 8px; }
+    .notif.two { left: 4px; bottom: 24px; }
+
+    /* Trust band + stats — must override 980px stats rules above */
+    .trust { padding: 40px 16px 56px; }
+    .trust-row { gap: 18px 28px; font-size: 13px; margin-bottom: 36px; }
+    .stats { grid-template-columns: 1fr; grid-template-rows: auto; gap: 14px; }
+    .stats .card.cost,
+    .stats .card.tx,
+    .stats .card.validators,
+    .stats .card.addresses {
+      grid-column: 1; grid-row: auto; max-width: none;
+    }
+    .stats .card { padding: 20px 18px; }
+    .stats .card .value { white-space: nowrap; }
+    .stats .card.cost {
+      flex-direction: column; align-items: flex-start; gap: 8px;
+      padding: 18px 20px;
+    }
+    .stats .card.cost .label { max-width: none; }
+    .stats .card.cost .value { font-size: 34px; }
+    .stats .card.tx { padding: 20px 18px; min-height: 170px; }
+    .stats .card.tx .value { font-size: 40px; margin-top: 8px; letter-spacing: -.045em; }
+    .stats .card.validators { min-height: 260px; padding: 20px 18px; }
+    .stats .card.validators .value { font-size: 52px; }
+    .stats .card.addresses { min-height: 210px; padding: 20px 18px; }
+    .stats .card.addresses .value { font-size: 40px; }
+    .stats .card.addresses .planet { width: 160px; height: 160px; top: 24px; right: -36px; }
+
+    /* Features */
+    .features { padding: 56px 16px; }
+    .features-grid { gap: 16px; margin-top: 32px; }
+    .feature { padding: 22px; }
+    .feature-t { font-size: 19px; }
+
+    /* Architecture */
+    .architecture { padding: 56px 16px; }
+    .architecture-grid { gap: 40px; }
+    .architecture-visual { min-height: 240px; }
+
+    /* Use cases */
+    .use-cases { padding: 48px 16px; }
+    .uc-detail { gap: 16px; }
+    .uc-detail-icon { width: 32px; height: 32px; }
+    .uc-detail-text { font-size: 17px; }
+    .uc-card { min-height: 320px; border-radius: 24px; }
+    .uc-card .overlay { padding: 24px 22px 22px; }
+    .uc-card .uc-logo { font-size: 26px; margin-bottom: 12px; }
+    .uc-card .uc-blurb { font-size: 14px; }
+
+    /* Industries */
+    .industries-left { padding: 48px 20px; }
+    .ind-tab { grid-template-columns: 20px 1fr; gap: 14px; }
+    .ind-tab-icon { transform: rotate(45deg) scale(0.85); margin-bottom: 10px; }
+    .ind-tab-title { font-size: 18px; }
+    .ind-tab.is-active .ind-tab-title { font-size: 22px; }
+    .ind-tab-desc { font-size: 15px; max-height: 0; }
+    .ind-tab.is-active .ind-tab-desc { max-height: 400px; margin-top: 18px; }
+    .industries-right { min-height: 260px; margin: 0 16px 32px; border-radius: 18px; }
+
+    /* Benefits + Pilot */
+    .benefits-band { padding: 0 16px 56px; }
+    .pilot-card { border-radius: 18px; }
+    .pilot-copy { padding: 32px 22px 28px; }
+    .pilot-copy p { font-size: 16px; margin-bottom: 24px; }
+    .pilot-cta { padding: 12px 24px; font-size: 14px; }
+    .pilot-media { min-height: 220px; }
+
+    /* Prism / Why */
+    .prism { padding: 48px 0; min-height: auto; }
+    .vm-card { padding: 28px 24px 30px; }
+    .why { padding: 56px 0 72px; }
+    .why-grid { gap: 24px; }
+    .why-art { width: 340px; height: 340px; right: -200px; top: -80px; opacity: 0.55; }
+    .why-art-2 { width: 200px; height: 200px; opacity: 0.3; }
+    .why-list { gap: 18px; margin-bottom: 32px; }
+
+    /* CTA band */
+    .cta { margin: 72px 16px; padding: 40px 24px; gap: 24px; }
+    .cta-actions { width: 100%; flex-direction: column; gap: 10px; }
+    .cta .pill-btn, .cta .ghost { width: 100%; justify-content: center; text-align: center; }
+
+    /* Footer */
+    footer { padding: 40px 16px 24px; }
+    .foot { grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 28px; }
+    .foot-bot { font-size: 11px; gap: 8px; flex-direction: column; }
   }
 
   /* Proprietary Compliance-Control Technology Section — dark with streaks bg */
