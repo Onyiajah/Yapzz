@@ -1279,14 +1279,16 @@
     .media-wrap { height: 340px; }
     .media-card.top { width: 56%; top: 0; right: 8%; }
     .media-card.bottom { width: 70%; bottom: -16px; right: 0; }
-    .notif { padding: 5px 12px 5px 5px; gap: 8px; }
-    .notif .ic { width: 26px; height: 26px; }
-    .notif .ic svg { width: 13px; height: 13px; }
-    .notif .t { font-size: 11px; }
-    .notif .s { font-size: 9px; }
-    .notif .v { font-size: 11px; margin-left: 4px; padding-left: 8px; }
-    .notif.one { top: 12px; left: 8px; }
-    .notif.two { left: 4px; bottom: 24px; }
+    /* Compact single-line notif pills on phones: hide subtitle so text never wraps */
+    .notif { padding: 5px 10px 5px 4px; gap: 6px; max-width: calc(100vw - 24px); }
+    .notif .ic { width: 24px; height: 24px; }
+    .notif .ic svg { width: 12px; height: 12px; }
+    .notif .label { gap: 0; }
+    .notif .t { font-size: 11px; white-space: nowrap; }
+    .notif .s { display: none; }
+    .notif .v { font-size: 11px; margin-left: 2px; padding-left: 6px; white-space: nowrap; }
+    .notif.one { top: 10px; left: 6px; }
+    .notif.two { left: 4px; bottom: 16px; }
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
