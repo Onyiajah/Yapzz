@@ -621,18 +621,18 @@
     .hero-actions { gap: 10px; }
     .btn-outline { padding: 11px 20px; }
 
-    /* Hero media cards — shrink notif pills + card sizes */
-    .media-wrap { height: 380px; }
-    .media-card.top { width: 70%; top: 6%; }
-    .media-card.bottom { width: 80%; bottom: -24px; }
-    .notif { padding: 6px 14px 6px 6px; gap: 8px; }
-    .notif .ic { width: 28px; height: 28px; }
-    .notif .ic svg { width: 14px; height: 14px; }
-    .notif .t { font-size: 12px; }
-    .notif .s { font-size: 10px; }
-    .notif .v { font-size: 12px; margin-left: 4px; padding-left: 8px; }
-    .notif.one { top: 16px; left: 8px; }
-    .notif.two { left: 0; bottom: 32px; }
+    /* Hero media cards — slimmer proportions so they don't feel chunky on phone */
+    .media-wrap { height: 340px; }
+    .media-card.top { width: 56%; top: 0; right: 8%; }
+    .media-card.bottom { width: 70%; bottom: -16px; right: 0; }
+    .notif { padding: 5px 12px 5px 5px; gap: 8px; }
+    .notif .ic { width: 26px; height: 26px; }
+    .notif .ic svg { width: 13px; height: 13px; }
+    .notif .t { font-size: 11px; }
+    .notif .s { font-size: 9px; }
+    .notif .v { font-size: 11px; margin-left: 4px; padding-left: 8px; }
+    .notif.one { top: 12px; left: 8px; }
+    .notif.two { left: 4px; bottom: 24px; }
 
     /* Trust band + stats */
     .trust { padding: 40px 16px 56px; }
@@ -644,16 +644,17 @@
     .stats .card.addresses {
       grid-column: 1; grid-row: auto; max-width: none;
     }
-    .stats .card { padding: 22px; }
-    .stats .card.cost { padding: 20px 22px; }
-    .stats .card.cost .value { font-size: 38px; }
-    .stats .card.tx { padding: 22px; min-height: 180px; }
-    .stats .card.tx .value { font-size: 48px; margin-top: 8px; }
-    .stats .card.validators { min-height: 280px; padding: 22px; }
-    .stats .card.validators .value { font-size: 56px; }
-    .stats .card.addresses { min-height: 220px; padding: 22px; }
-    .stats .card.addresses .value { font-size: 44px; }
-    .stats .card.addresses .planet { width: 170px; height: 170px; top: 20px; right: -30px; }
+    .stats .card { padding: 20px 18px; }
+    .stats .card .value { white-space: nowrap; }
+    .stats .card.cost { padding: 18px 20px; gap: 16px; }
+    .stats .card.cost .value { font-size: 34px; }
+    .stats .card.tx { padding: 20px 18px; min-height: 170px; }
+    .stats .card.tx .value { font-size: 40px; margin-top: 8px; letter-spacing: -.045em; }
+    .stats .card.validators { min-height: 260px; padding: 20px 18px; }
+    .stats .card.validators .value { font-size: 52px; }
+    .stats .card.addresses { min-height: 210px; padding: 20px 18px; }
+    .stats .card.addresses .value { font-size: 40px; }
+    .stats .card.addresses .planet { width: 160px; height: 160px; top: 24px; right: -36px; }
 
     /* Features */
     .features { padding: 56px 16px; }
