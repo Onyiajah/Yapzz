@@ -481,23 +481,16 @@
   .architecture-visual::before {
     content: "";
     position: absolute;
-    width: 80%; height: 80%;
+    width: 70%; height: 70%;
     border-radius: 50%;
-    /* Soft blue + orange wash behind the image so its glow feels embedded
-       in the section rather than floating on top */
-    background:
-      radial-gradient(circle at 50% 50%, rgba(20, 40, 80, 0.18) 0%, transparent 65%),
-      radial-gradient(circle at 50% 50%, rgba(242, 127, 13, 0.10) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(242, 127, 13, 0.10) 0%, transparent 70%);
     filter: blur(40px);
     z-index: 0;
   }
   .architecture-visual img {
     position: relative; z-index: 1;
     width: 100%; max-width: 540px; height: auto;
-    /* Soft radial mask makes the image bleed into the section background
-       instead of sitting in a hard rectangle */
-    -webkit-mask-image: radial-gradient(ellipse 75% 80% at center, #000 30%, transparent 95%);
-            mask-image: radial-gradient(ellipse 75% 80% at center, #000 30%, transparent 95%);
+    border-radius: 12px;
   }
   .architecture-copy { max-width: 480px; }
   .architecture-eyebrow {
