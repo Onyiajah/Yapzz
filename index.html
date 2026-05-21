@@ -1491,7 +1491,7 @@
       <!-- MEDIA -->
       <div class="media-wrap">
         <div class="media-card top">
-          <image-slot id="hero-top" shape="rounded" radius="22" placeholder="Drop an industrial / facility photo" src="assets/placeholders/hero-top.svg"></image-slot>
+          <image-slot id="hero-top" shape="rounded" radius="22" placeholder="Drop an industrial / facility photo" src="assets/hero-top.png"></image-slot>
           <div class="notif one">
             <span class="ic">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
@@ -1504,7 +1504,7 @@
           </div>
         </div>
         <div class="media-card bottom">
-          <image-slot id="hero-bottom" shape="rounded" radius="22" placeholder="Drop an operator / field photo" src="assets/placeholders/hero-bottom.svg"></image-slot>
+          <image-slot id="hero-bottom" shape="rounded" radius="22" placeholder="Drop an operator / field photo" src="assets/industry-defense.png"></image-slot>
           <div class="notif two">
             <span class="ic">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7"/><path d="M11 6l7 7"/><path d="M14 3l-3 3"/><path d="M21 10l-3 3"/><path d="M13 11L3 21"/><path d="M3 21h7"/></svg>
@@ -1762,7 +1762,7 @@
     </div>
 
     <div class="industries-right" id="industries-img">
-      <image-slot id="industries-bg" shape="rect" placeholder="Drop defense operations photo" src="assets/placeholders/industries.svg"></image-slot>
+      <image-slot id="industries-bg" shape="rect" placeholder="Drop defense operations photo" src="assets/industry-defense.png"></image-slot>
       <div class="img-shade"></div>
       <div class="partner">
         <h3 class="partner-logo">yapzz<span class="slash">//</span>fed</h3>
@@ -1812,7 +1812,7 @@
       </div>
 
       <div class="uc-card">
-        <image-slot id="uc-case-bg" shape="rect" placeholder="Drop case-study photo (facility / field / urban)" src="assets/placeholders/use-case.svg"></image-slot>
+        <image-slot id="uc-case-bg" shape="rect" placeholder="Drop case-study photo (facility / field / urban)" src="assets/use-case.png"></image-slot>
         <div class="overlay">
           <h3 class="uc-logo">yapzz<span class="slash">//</span>ops</h3>
           <div class="uc-footer">
@@ -1834,7 +1834,7 @@
         <a class="pilot-cta" href="mailto:sales@yapzz.com?subject=Request%20a%20YapzZ%20pilot%20(single%20facility%2C%2030%20days)">Request a pilot</a>
       </div>
       <div class="pilot-media">
-        <image-slot id="pilot-bg" shape="rect" placeholder="Drop product / device / field-app photo" src="assets/placeholders/pilot.svg"></image-slot>
+        <image-slot id="pilot-bg" shape="rect" placeholder="Drop product / device / field-app photo" src="assets/pilot.png"></image-slot>
         <div class="fade"></div>
       </div>
     </div>
@@ -1962,32 +1962,36 @@
     
     const tabData = {
       'defense': {
+        src: 'assets/industry-defense.png',
         image: 'Defense Operations Facility',
         placeholder: 'Drop defense operations photo'
       },
       'pharma': {
+        src: 'assets/industry-pharma.png',
         image: 'Pharmaceutical Manufacturing',
         placeholder: 'Drop pharmaceutical facility photo'
       },
       'energy': {
+        src: 'assets/industry-energy.png',
         image: 'Energy & Mining Operations',
         placeholder: 'Drop energy/mining facility photo'
       }
     };
-    
+
     tabs.forEach(t => {
       t.addEventListener('click', () => {
         if (t.classList.contains('is-active')) return;
-        
+
         tabs.forEach(x => x.classList.remove('is-active'));
         t.classList.add('is-active');
-        
+
         const tabId = t.getAttribute('data-tab');
         const logoText = t.getAttribute('data-logo');
         const descText = t.getAttribute('data-desc');
-        
+
         // Update image
         if (tabData[tabId] && imageSlot) {
+          imageSlot.setAttribute('src', tabData[tabId].src);
           imageSlot.setAttribute('placeholder', tabData[tabId].placeholder);
           imageSlot.setAttribute('alt', tabData[tabId].image);
         }
