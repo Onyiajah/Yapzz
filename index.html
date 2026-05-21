@@ -1373,83 +1373,6 @@
     .foot-bot { font-size: 11px; gap: 8px; flex-direction: column; }
   }
 
-  /* Tech stack section — matches dark .prism / .why visual language */
-  .tech-stack {
-    background: linear-gradient(90deg, #2a1800 0%, #000000 100%);
-    color: #fff;
-    padding: 112px 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .tech-stack-head {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 64px;
-  }
-  .tech-stack-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px; font-weight: 500;
-    letter-spacing: .14em; text-transform: uppercase;
-    color: var(--orange);
-    margin: 0 0 20px;
-  }
-  .tech-stack-h {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(36px, 5vw, 60px);
-    font-weight: 600;
-    letter-spacing: -.03em;
-    line-height: 1.05;
-    margin: 0;
-    color: #fff;
-  }
-  .tech-stack-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .tech-card {
-    background: rgba(20, 20, 22, 0.55);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    border-radius: 22px;
-    padding: 36px 32px 40px;
-    color: #fff;
-    transition: border-color .25s ease, transform .25s ease, background .25s ease;
-  }
-  .tech-card:hover {
-    border-color: rgba(242, 127, 13, 0.35);
-    background: rgba(28, 24, 20, 0.65);
-    transform: translateY(-2px);
-  }
-  .tech-card .tech-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    background: rgba(242, 127, 13, 0.12);
-    border: 1px solid rgba(242, 127, 13, 0.28);
-    display: inline-flex; align-items: center; justify-content: center;
-    color: var(--orange);
-    margin-bottom: 24px;
-  }
-  .tech-card .tech-icon .material-symbols-outlined { font-size: 24px; }
-  .tech-card h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 22px; font-weight: 700;
-    letter-spacing: -.015em; line-height: 1.2;
-    margin: 0 0 14px;
-    color: #fff;
-  }
-  .tech-card p {
-    font-size: 15px; line-height: 1.6;
-    color: rgba(255, 255, 255, 0.78);
-    margin: 0;
-  }
-  @media (max-width: 980px) {
-    .tech-stack { padding: 72px 0; }
-    .tech-stack-grid { grid-template-columns: 1fr; gap: 16px; }
-    .tech-stack-head { margin-bottom: 48px; }
-    .tech-card { padding: 28px 24px 32px; }
-  }
-
   /* Proprietary Compliance-Control Technology Section — dark with streaks bg */
   .py-48 { padding-top: 112px; padding-bottom: 112px; margin-top: 0; }
   .px-6 { padding-left: 24px; padding-right: 24px; }
@@ -1916,30 +1839,51 @@
   </div>
 </section>
 
-<section class="tech-stack">
-  <div class="wrap">
-    <div class="tech-stack-head">
-      <p class="tech-stack-eyebrow">Infrastructure Layer</p>
-      <h2 class="tech-stack-h">Proprietary Compliance-Control Technology</h2>
-    </div>
-    <div class="tech-stack-grid">
-      <div class="tech-card">
-        <div class="tech-icon"><span class="material-symbols-outlined">terminal</span></div>
-        <h3>Patent-Pending Logic Core</h3>
-        <p>A deterministic execution environment that evaluates regulatory logic in isolation, ensuring that every operational movement is pre-validated against jurisdiction-specific mandates.</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon"><span class="material-symbols-outlined">hub</span></div>
-        <h3>Unified Traceability Fabric</h3>
-        <p>An interconnected graph of custody records that links material origin, handler history, and regulatory approvals into a single, navigable source of truth for entire supply chains.</p>
-      </div>
-      <div class="tech-card">
-        <div class="tech-icon"><span class="material-symbols-outlined">shield_lock</span></div>
-        <h3>Defense-Grade Encryption</h3>
-        <p>Zero-trust data architecture protecting sensitive compliance records with post-quantum ready encryption, ensuring that even under extreme compromise, operational data remains sealed.</p>
-      </div>
-    </div>
-  </div>
+<!-- Proprietary Compliance-Control Technology Section -->
+<section class="py-48 px-6 relative overflow-hidden" style="background: #000;">
+<!-- Background image: diagonal light streaks -->
+<div class="absolute inset-0 z-0" aria-hidden="true">
+  <img src="assets/infrastructure-bg.jpeg" alt="" class="w-full h-full object-cover" style="object-position: center bottom; opacity: 0.7;"/>
+  <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.65) 100%);"></div>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="text-center mb-24" style="margin-bottom: 64px;">
+<span style="display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #FFB35E; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 28px; padding: 8px 18px; border: 1px solid rgba(255, 179, 94, 0.45); border-radius: 999px; background: rgba(255, 179, 94, 0.06); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); text-shadow: 0 1px 12px rgba(0,0,0,0.4);">Infrastructure Layer</span>
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter drop-shadow-2xl" style="color: #fff;">Proprietary Compliance-Control Technology</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="group p-8 rounded-3xl border-t-0 border-b-4 border-b-primary-container/40 hover:border-b-primary-container transition-all bg-surface-container-lowest border border-white-10 backdrop-blur-2xl shadow-2xl">
+<div class="h-[2px] w-12 bg-primary-container mb-8"></div>
+<h3 class="font-headline text-2xl font-bold mb-4 flex items-center gap-3" style="color: #fff;">
+<span class="material-symbols-outlined text-primary-container">terminal</span>
+                        Patent-Pending Logic Core
+                    </h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                        A deterministic execution environment that evaluates regulatory logic in isolation, ensuring that every operational movement is pre-validated against jurisdiction-specific mandates.
+                    </p>
+</div>
+<div class="group p-8 rounded-3xl border-t-0 border-b-4 border-b-secondary/40 hover:border-b-secondary transition-all bg-surface-container-lowest border border-white-10 backdrop-blur-2xl shadow-2xl">
+<div class="h-[2px] w-12 bg-secondary mb-8"></div>
+<h3 class="font-headline text-2xl font-bold mb-4 flex items-center gap-3" style="color: #fff;">
+<span class="material-symbols-outlined text-secondary">hub</span>
+                        Unified Traceability Fabric
+                    </h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                        An interconnected graph of custody records that links material origin, handler history, and regulatory approvals into a single, navigable source of truth for entire supply chains.
+                    </p>
+</div>
+<div class="group p-8 rounded-3xl border-t-0 border-b-4 border-b-primary/40 hover:border-b-primary transition-all bg-surface-container-lowest border border-white-10 backdrop-blur-2xl shadow-2xl">
+<div class="h-[2px] w-12 bg-primary mb-8"></div>
+<h3 class="font-headline text-2xl font-bold mb-4 flex items-center gap-3" style="color: #fff;">
+<span class="material-symbols-outlined text-primary">shield_lock</span>
+                        Defense-Grade Encryption
+                    </h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                        Zero-trust data architecture protecting sensitive compliance records with post-quantum ready encryption, ensuring that even under extreme compromise, operational data remains sealed.
+                    </p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="cta">
