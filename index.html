@@ -203,11 +203,8 @@
   .notif .s { font-size: 11px; color: rgba(255,255,255,.65); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; white-space: nowrap; }
   .notif .v { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: white; margin-left: 8px; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.15); white-space: nowrap; }
   .notif.one { top: 32px; left: 24px; }
-  /* Second pill sits at the overlap line between the two cards, pulled into
-     the left gutter so most of it floats on the page background — not the photo */
-  .notif.two { top: 12px; left: -200px; bottom: auto; }
-  /* Third pill sits just below the bottom card, horizontally centered */
-  .notif.three { bottom: -28px; left: 50%; transform: translateX(-50%); right: auto; top: auto; }
+  .notif.two { bottom: 64px; left: -48px; }
+  .notif.three { top: 24px; right: -32px; }
 
   /* MOCKUP */
   .mockup-wrap { position: relative; min-height: 480px; }
@@ -703,8 +700,8 @@
     .media-card.top { right: 4%; width: 60%; }
     .media-card.bottom { right: 0; width: 76%; }
     .notif.one { left: 12px; }
-    .notif.two { left: -120px; top: 8px; bottom: auto; }
-    .notif.three { bottom: -24px; left: 50%; transform: translateX(-50%); right: auto; top: auto; }
+    .notif.two { left: 0; }
+    .notif.three { right: -8px; top: 16px; }
     .features-grid { grid-template-columns: 1fr; }
     .trust-row { gap: 32px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
@@ -1338,14 +1335,9 @@
     .notif .s { display: none; }
     .notif .v { font-size: 11px; margin-left: 2px; padding-left: 6px; white-space: nowrap; }
     .notif.one { top: 10px; left: 6px; }
-    /* On phones, gutter is too narrow for a left-floated pill — keep it on the card */
-    .notif.two { left: 4px; bottom: 80px; }
-    /* Third pill sits below the image, centered. Constrained to viewport width */
-    .notif.three {
-      bottom: -20px; left: 50%; right: auto; top: auto;
-      transform: translateX(-50%);
-      max-width: calc(100vw - 24px);
-    }
+    .notif.two { left: 4px; bottom: 16px; }
+    /* Third pill hidden on phones — its label is too long for a 343px viewport */
+    .notif.three { display: none; }
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
