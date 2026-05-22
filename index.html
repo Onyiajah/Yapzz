@@ -1340,9 +1340,17 @@
     .notif .s { display: none; }
     .notif .v { font-size: 11px; margin-left: 2px; padding-left: 6px; white-space: nowrap; }
     .notif.one { top: 10px; left: 6px; }
-    .notif.two { left: 4px; bottom: 16px; }
-    /* Third pill hidden on phones — its label is too long for a 343px viewport */
-    .notif.three { display: none; }
+    /* Anchor to the right edge of the bottom card so the pill extends LEFT
+       into the plain background rather than overflowing the viewport */
+    .notif.two { right: 4px; bottom: 16px; left: auto; }
+    /* Third pill shown on phones, anchored top-right; smaller type + no
+       value timestamp so it fits within viewport width */
+    .notif.three {
+      display: inline-flex;
+      right: 4px; top: 8px; left: auto; bottom: auto;
+    }
+    .notif.three .t { font-size: 10px; }
+    .notif.three .v { display: none; }
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
