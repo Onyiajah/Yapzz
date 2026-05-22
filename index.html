@@ -204,7 +204,8 @@
   .notif .v { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: white; margin-left: 8px; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.15); }
   .notif.one { top: 32px; left: 24px; }
   .notif.two { bottom: 64px; left: -48px; }
-  .notif.three { top: 24px; right: -32px; }
+  /* Third pill sits just below the bottom card, horizontally centered */
+  .notif.three { bottom: -28px; left: 50%; transform: translateX(-50%); right: auto; top: auto; }
 
   /* MOCKUP */
   .mockup-wrap { position: relative; min-height: 480px; }
@@ -701,7 +702,7 @@
     .media-card.bottom { right: 0; width: 76%; }
     .notif.one { left: 12px; }
     .notif.two { left: 0; }
-    .notif.three { right: -8px; top: 16px; }
+    .notif.three { bottom: -24px; left: 50%; transform: translateX(-50%); right: auto; top: auto; }
     .features-grid { grid-template-columns: 1fr; }
     .trust-row { gap: 32px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
@@ -1336,8 +1337,12 @@
     .notif .v { font-size: 11px; margin-left: 2px; padding-left: 6px; white-space: nowrap; }
     .notif.one { top: 10px; left: 6px; }
     .notif.two { left: 4px; bottom: 16px; }
-    /* Third pill hidden on phones — its label is too long for a 343px viewport */
-    .notif.three { display: none; }
+    /* Third pill sits below the image, centered. Constrained to viewport width */
+    .notif.three {
+      bottom: -20px; left: 50%; right: auto; top: auto;
+      transform: translateX(-50%);
+      max-width: calc(100vw - 24px);
+    }
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
@@ -1518,7 +1523,7 @@
       <a href="#">Compliance</a>
     </nav>
     <span class="spacer"></span>
-    <a class="sign-in" href="https://outlook.office365.com/owa/calendar/YapzZ@dceiq.com/bookings/" target="_blank" rel="noopener noreferrer">Request a demo</a>
+    <a class="sign-in" href="https://outlook.office365.com/owa/calendar/YapzZ@dceiq.com/bookings/" target="_blank" rel="noopener noreferrer">Book a demo</a>
     <a class="pill-btn" href="mailto:sales@yapzz.com?subject=Request%20pilot%20access%20to%20YapzZ">Request pilot access</a>
   </div>
 </header>
@@ -1945,7 +1950,7 @@
 
 <a class="float-cta" id="float-cta" href="https://outlook.office365.com/owa/calendar/YapzZ@dceiq.com/bookings/" target="_blank" rel="noopener noreferrer" aria-label="Book a YapzZ demo">
   <span class="dot" aria-hidden="true"></span>
-  Request a demo
+  Book a demo
 </a>
 
 <script src="image-slot.js"></script>
