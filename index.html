@@ -204,6 +204,7 @@
   .notif .v { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: white; margin-left: 8px; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.15); }
   .notif.one { top: 32px; left: 24px; }
   .notif.two { bottom: 64px; left: -48px; }
+  .notif.three { top: 24px; right: -32px; }
 
   /* MOCKUP */
   .mockup-wrap { position: relative; min-height: 480px; }
@@ -700,6 +701,7 @@
     .media-card.bottom { right: 0; width: 76%; }
     .notif.one { left: 12px; }
     .notif.two { left: 0; }
+    .notif.three { right: -8px; top: 16px; }
     .features-grid { grid-template-columns: 1fr; }
     .trust-row { gap: 32px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
@@ -1334,6 +1336,8 @@
     .notif .v { font-size: 11px; margin-left: 2px; padding-left: 6px; white-space: nowrap; }
     .notif.one { top: 10px; left: 6px; }
     .notif.two { left: 4px; bottom: 16px; }
+    /* Third pill hidden on phones — its label is too long for a 343px viewport */
+    .notif.three { display: none; }
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
@@ -1560,6 +1564,16 @@
               <span class="s">Magazine M-04 &middot; within capacity</span>
             </span>
             <span class="v">14:28 UTC</span>
+          </div>
+          <div class="notif three">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <span class="label">
+              <span class="t">Shipment Pending &middot; Receiver Signature Required</span>
+              <span class="s">Manifest M-3201 &middot; awaiting signature</span>
+            </span>
+            <span class="v">ETA 16:42</span>
           </div>
         </div>
       </div>
