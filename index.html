@@ -133,7 +133,15 @@
   .hero-copy .lede {
     font-size: 19px; line-height: 1.5;
     color: var(--ink-2); max-width: 520px;
-    margin: 0 0 40px;
+    margin: 0 0 18px;
+  }
+  .hero-copy .hero-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; line-height: 1.4;
+    letter-spacing: .02em;
+    color: var(--orange-2);
+    max-width: 520px;
+    margin: 0 0 36px;
   }
   .hero-actions {
     display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
@@ -422,6 +430,45 @@
     width: 230px; height: 230px; z-index: 1; pointer-events: none;
   }
   .stats .card.addresses .value { font-size: 64px; margin-top: auto; padding-bottom: 4px; color: var(--ink); }
+
+  /* Enforcement pillar cards — replaces stats grid in trust band */
+  .pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    text-align: left;
+  }
+  .pillar {
+    background: #FFFFFF;
+    border: 1px solid #ECEEF1;
+    border-radius: 22px;
+    padding: 30px 32px;
+    box-shadow: 0 24px 50px -28px rgba(60, 40, 20, 0.20), 0 2px 6px rgba(60, 40, 20, 0.04);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .pillar:hover {
+    transform: translateY(-2px);
+    border-color: #E0E3E8;
+    box-shadow: 0 30px 60px -28px rgba(60, 40, 20, 0.28), 0 4px 10px rgba(60, 40, 20, 0.06);
+  }
+  .pillar h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 19px; font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -.015em;
+    line-height: 1.25;
+    margin: 0 0 12px;
+  }
+  .pillar p {
+    font-size: 15px; line-height: 1.55;
+    color: var(--ink-3);
+    margin: 0;
+  }
+  @media (max-width: 980px) {
+    .pillars { grid-template-columns: 1fr; gap: 14px; }
+    .pillar { padding: 24px 26px; }
+    .pillar h3 { font-size: 18px; }
+  }
 
   @keyframes pulse-node { 0% { r: 2.2; opacity: 1; } 100% { r: 9; opacity: 0; } }
   .pulse-node { animation: pulse-node 2.4s ease-out infinite; transform-origin: center; transform-box: fill-box; }
@@ -1479,10 +1526,11 @@
       <!-- COPY -->
       <div class="hero-copy">
         <h1>Track. Control.<br><span class="accent">Comply.</span></h1>
-        <p class="lede">The enforcement layer for regulated materials. Block non-compliant transactions at source, seal records on submission, and prove chain-of-custody to any auditor through verifiable digital records.</p>
+        <p class="lede">YapzZ is the compliance-enforcement layer for regulated materials. Our patent-pending hard-blocking technology validates authority, licensing, storage limits, inspections, and custody status before regulated-material transactions can commit. Approved records are sealed with correction history and audit-ready traceability.</p>
+        <p class="hero-tag">Patent-pending transaction control for regulated-material custody.</p>
         <div class="hero-actions">
-          <a class="pill-btn lg" href="mailto:sales@yapzz.com?subject=Request%20access%20to%20YapzZ">Request access</a>
-          <a class="btn-outline" href="https://outlook.office365.com/owa/calendar/YapzZ@dceiq.com/bookings/" target="_blank" rel="noopener noreferrer">Request a demo</a>
+          <a class="pill-btn lg" href="mailto:sales@yapzz.com?subject=Request%20pilot%20access%20to%20YapzZ">Request pilot access</a>
+          <a class="btn-outline" href="https://outlook.office365.com/owa/calendar/YapzZ@dceiq.com/bookings/" target="_blank" rel="noopener noreferrer">Book a demo</a>
         </div>
       </div>
 
@@ -1495,8 +1543,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
             </span>
             <span class="label">
-              <span class="t">Class-II &middot; Sealed</span>
-              <span class="s">Transfer T-8821 &middot; OP-04823</span>
+              <span class="t">Regulated Material &middot; Sealed</span>
+              <span class="s">Transfer T-8821 &middot; receiver acknowledged</span>
             </span>
             <span class="v">2.450 kg</span>
           </div>
@@ -1508,8 +1556,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7"/><path d="M11 6l7 7"/><path d="M14 3l-3 3"/><path d="M21 10l-3 3"/><path d="M13 11L3 21"/><path d="M3 21h7"/></svg>
             </span>
             <span class="label">
-              <span class="t">&sect; R-114.2 &middot; Cleared</span>
-              <span class="s">Dual-approval &middot; sup. signed</span>
+              <span class="t">Magazine Transfer &middot; Capacity Checked</span>
+              <span class="s">Magazine M-04 &middot; within capacity</span>
             </span>
             <span class="v">14:28 UTC</span>
           </div>
@@ -1524,60 +1572,30 @@
   <div class="wrap">
     <div class="trust-label">BUILT FOR</div>
     <div class="trust-row">
-      <span class="item">DEFENSE</span>
-      <span class="item">PHARMA</span>
-      <span class="item">ENERGY</span>
+      <span class="item">EXPLOSIVES</span>
       <span class="item">MINING</span>
-      <span class="item">AG-CHEM</span>
+      <span class="item">ENERGY SERVICES</span>
+      <span class="item">FIREWORKS</span>
       <span class="item">LOGISTICS</span>
+      <span class="item">REGULATED MATERIALS</span>
     </div>
 
-    <div class="stats">
-      <div class="card cost">
-        <div class="label">Avg. Reconciliation<br/>Time Saved</div>
-        <div class="value">96 hrs</div>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Patent-Pending Hard Blocking</h3>
+        <p>Compliance enforcement logic designed to stop non-compliant transactions before they commit.</p>
       </div>
-
-      <div class="card validators">
-        <div class="map-bg">
-          <svg id="worldmap" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
-        </div>
-        <div class="label">Cleared Facilities Live</div>
-        <div class="value">240+</div>
+      <div class="pillar">
+        <h3>License &amp; Authorized Personnel Blocks</h3>
+        <p>Blocks transactions when licenses are expired, users are not approved, or required authority checks are not met.</p>
       </div>
-
-      <div class="card tx">
-        <div class="label">Custody Records Sealed</div>
-        <div class="value">18,420,917</div>
+      <div class="pillar">
+        <h3>Magazine Capacity Blocks</h3>
+        <p>Prevents movements that would exceed configured magazine limits, storage rules, or regulated-material thresholds.</p>
       </div>
-
-      <div class="card addresses">
-        <div class="label">Regulatory Frameworks<br/>Covered</div>
-        <div class="planet">
-          <svg viewBox="0 0 230 230" width="230" height="230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <radialGradient id="pg" cx="35%" cy="35%" r="75%">
-                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
-                <stop offset="35%" stop-color="#C8D7EE" stop-opacity="0.95"/>
-                <stop offset="75%" stop-color="#6A8FD1" stop-opacity="0.9"/>
-                <stop offset="100%" stop-color="#4870BD" stop-opacity="1"/>
-              </radialGradient>
-              <radialGradient id="pglow" cx="50%" cy="50%" r="50%">
-                <stop offset="60%" stop-color="rgba(200,215,238,0)"/>
-                <stop offset="100%" stop-color="rgba(200,215,238,0.6)"/>
-              </radialGradient>
-              <pattern id="cont" width="6" height="6" patternUnits="userSpaceOnUse">
-                <circle cx="3" cy="3" r="0.7" fill="rgba(255,255,255,0.35)"/>
-              </pattern>
-            </defs>
-            <circle cx="115" cy="115" r="114" fill="url(#pglow)"/>
-            <circle cx="115" cy="115" r="98" fill="url(#pg)"/>
-            <circle cx="115" cy="115" r="98" fill="url(#cont)" opacity="0.5"/>
-            <ellipse cx="97" cy="85" rx="44" ry="14" fill="rgba(255,255,255,0.25)"/>
-            <ellipse cx="125" cy="125" rx="34" ry="9" fill="rgba(255,255,255,0.18)"/>
-          </svg>
-        </div>
-        <div class="value">27</div>
+      <div class="pillar">
+        <h3>Inspection &amp; Audit Lockouts</h3>
+        <p>Stops transactions when required inspections, audit checks, or compliance records are overdue or incomplete.</p>
       </div>
     </div>
   </div>
@@ -1663,13 +1681,13 @@
       <article class="vm-card">
         <div class="vm-eyebrow"><span class="num">01 /</span> Mission</div>
         <h3>Compliance as infrastructure.</h3>
-        <p>Every regulated transaction validated, sealed, and provable &mdash; before it commits. No reconciliation. No retroactive audits. No ambiguity.</p>
+        <p>Every regulated-material transaction is validated before it commits, then locked with correction history and audit-ready traceability. No silent edits. No missing authority checks. No ambiguity.</p>
       </article>
 
       <article class="vm-card">
         <div class="vm-eyebrow"><span class="num">02 /</span> Purpose</div>
         <h3>From inventory to enforcement.</h3>
-        <p>Inventory systems track what already happened. YapzZ decides what's allowed to happen next &mdash; with regulatory logic running ahead of every action, not behind it.</p>
+        <p>Inventory systems track what already happened. YapzZ uses patent-pending hard-blocking logic to decide what is allowed to happen next &mdash; before the transaction can commit.</p>
       </article>
     </div>
   </div>
@@ -1678,22 +1696,22 @@
 <section class="features">
   <div class="wrap">
     <div class="features-eb">PLATFORM</div>
-    <h2 class="features-h">Three primitives. One enforcement layer.</h2>
+    <h2 class="features-h">Patent-Pending Hard-Blocking Controls<br/>One compliance-enforcement layer.</h2>
     <div class="features-grid">
       <div class="feature">
         <div class="feature-num">01 · ENFORCE</div>
-        <div class="feature-t">Block non-compliant action at source</div>
-        <div class="feature-b">Rules execute before commit &mdash; license, jurisdiction, and dual-approval enforced as code.</div>
+        <div class="feature-t">Block non-compliant transactions before they commit</div>
+        <div class="feature-b">Patent-pending hard-blocking logic checks licensing, authorized personnel, storage limits, inspection status, audit requirements, and custody status before regulated materials can move.</div>
       </div>
       <div class="feature">
         <div class="feature-num">02 · SEAL</div>
-        <div class="feature-t">Records sealed on submission</div>
-        <div class="feature-b">Every approval is bound with a deterministic hash &mdash; permanent the moment it happens.</div>
+        <div class="feature-t">Lock approved records with correction history</div>
+        <div class="feature-b">Approved transactions are sealed into an audit-ready record. Corrections do not erase history &mdash; they create a visible amendment trail.</div>
       </div>
       <div class="feature">
         <div class="feature-num">03 · TRACE</div>
-        <div class="feature-t">Custody continuous, not eventual</div>
-        <div class="feature-b">Storage, transfer, and field handoffs tracked as one chain &mdash; a break is an alert.</div>
+        <div class="feature-t">Maintain custody from shipment to acceptance</div>
+        <div class="feature-b">Transfers, storage moves, field handoffs, and in-transit shipments stay connected until the receiving party accepts custody.</div>
       </div>
     </div>
   </div>
@@ -1723,25 +1741,14 @@
     <div class="industries-left">
       <div class="ind-tabs">
 
-        <button type="button" class="ind-tab is-active" data-tab="defense" data-logo="YapzZ//fed" data-desc="Used by a Tier-1 defense logistics operator across 14 cleared facilities to enforce dual-approval and seal every transfer in seconds &mdash; eliminating cross-system reconciliation entirely.">
+        <button type="button" class="ind-tab is-active" data-tab="defense" data-logo="YapzZ//ops" data-desc="Built for regulated-material operators managing custody, storage, transfers, receiving, and audit-ready accountability across controlled workflows.">
           <div class="ind-tab-rail">
             <div class="ind-tab-icon" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
             <div class="ind-tab-line"></div>
           </div>
           <div class="ind-tab-body">
             <h2 class="ind-tab-title">For Defense Operators</h2>
-            <p class="ind-tab-desc">Move controlled materials across cleared facilities and partner nations with rules enforced as code &mdash; license, route, and dual-approval resolved at submission. Every transfer leaves a sealed, tamper-evident trail that satisfies ITAR, EAR, and host-nation auditors without a quarterly reconciliation sprint.</p>
-          </div>
-        </button>
-
-        <button type="button" class="ind-tab" data-tab="pharma" data-logo="YapzZ//pharma" data-desc="Clinical trial management operator using YapzZ to track Class-II substances with sealed DEA reports &mdash; streamlining compliance audits significantly.">
-          <div class="ind-tab-rail">
-            <div class="ind-tab-icon" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <div class="ind-tab-line"></div>
-          </div>
-          <div class="ind-tab-body">
-            <h2 class="ind-tab-title">For Pharmaceutical</h2>
-            <p class="ind-tab-desc">Track Class-II and III substances from manufacture through clinical handoff with custody continuous, not eventual. DEA reporting becomes a read-only view of the same ledger your operators use &mdash; submissions sealed the moment they happen, not days later.</p>
+            <p class="ind-tab-desc">Built for regulated-material operations that require transaction control, custody tracking, audit-ready records, and compliance enforcement before materials move.</p>
           </div>
         </button>
 
@@ -1764,7 +1771,7 @@
       <div class="img-shade"></div>
       <div class="partner">
         <h3 class="partner-logo">YapzZ<span class="slash">//</span>fed</h3>
-        <p class="partner-desc">Used by a Tier-1 defense logistics operator across 14 cleared facilities to enforce dual-approval and seal every transfer in seconds &mdash; eliminating cross-system reconciliation entirely.</p>
+        <p class="partner-desc">Built for regulated-material operators managing custody, storage, transfers, receiving, and audit-ready accountability across controlled workflows.</p>
       </div>
     </div>
 
@@ -1814,7 +1821,7 @@
         <div class="overlay">
           <h3 class="uc-logo">YapzZ<span class="slash">//</span>ops</h3>
           <div class="uc-footer">
-            <p class="uc-blurb">A Tier-1 defense logistics operator uses YapzZ to enforce dual-approval and seal every transfer in seconds &mdash; eliminating reconciliation entirely.</p>
+            <p class="uc-blurb">Built for regulated-material operators managing custody, storage, transfers, receiving, and audit-ready accountability across controlled workflows.</p>
             <a class="uc-learn" href="#">Learn more</a>
           </div>
         </div>
@@ -1879,7 +1886,7 @@
                         Defense-Grade Encryption
                     </h3>
 <p class="text-on-surface-variant leading-relaxed text-sm">
-                        Zero-trust data architecture protecting sensitive compliance records with post-quantum ready encryption, ensuring that even under extreme compromise, operational data remains sealed.
+                        Encrypted compliance records, role-based access control, immutable audit trails, and tenant-isolated data architecture.
                     </p>
 </div>
 </div>
@@ -1908,7 +1915,7 @@
       </div>
       <div class="foot-col">
         <div class="foot-h">Solutions</div>
-        <a href="#">Defense</a><a href="#">Pharma</a><a href="#">Energy</a><a href="#">Mining</a>
+        <a href="#">Defense</a><a href="#">Energy</a><a href="#">Mining</a><a href="#">Explosives</a>
       </div>
       <div class="foot-col">
         <div class="foot-h">Company</div>
@@ -1916,7 +1923,7 @@
       </div>
     </div>
     <div class="foot-bot">
-      <span>© 2026 YAPZZ CORP · PATENT PENDING</span>
+      <span>© 2026 YapzZ LLC. All rights reserved. · PATENT PENDING</span>
       <span>SCHEMA 2026.04 · BUILD 1.4.218</span>
     </div>
   </div>
@@ -1963,11 +1970,6 @@
         src: 'assets/industry-defense.png',
         image: 'Defense Operations Facility',
         placeholder: 'Drop defense operations photo'
-      },
-      'pharma': {
-        src: 'assets/industry-pharma.png',
-        image: 'Pharmaceutical Manufacturing',
-        placeholder: 'Drop pharmaceutical facility photo'
       },
       'energy': {
         src: 'assets/industry-energy.png',
