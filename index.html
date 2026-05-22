@@ -203,8 +203,9 @@
   .notif .s { font-size: 11px; color: rgba(255,255,255,.65); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; white-space: nowrap; }
   .notif .v { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: white; margin-left: 8px; padding-left: 12px; border-left: 1px solid rgba(255,255,255,.15); white-space: nowrap; }
   .notif.one { top: 32px; left: 24px; }
-  /* Second pill pushed up to leave breathing room for the third pill below */
-  .notif.two { bottom: 160px; left: -48px; }
+  /* Second pill sits at the overlap line between the two cards, pulled into
+     the left gutter so most of it floats on the page background — not the photo */
+  .notif.two { top: 12px; left: -200px; bottom: auto; }
   /* Third pill sits just below the bottom card, horizontally centered */
   .notif.three { bottom: -28px; left: 50%; transform: translateX(-50%); right: auto; top: auto; }
 
@@ -702,7 +703,7 @@
     .media-card.top { right: 4%; width: 60%; }
     .media-card.bottom { right: 0; width: 76%; }
     .notif.one { left: 12px; }
-    .notif.two { left: 0; bottom: 130px; }
+    .notif.two { left: -120px; top: 8px; bottom: auto; }
     .notif.three { bottom: -24px; left: 50%; transform: translateX(-50%); right: auto; top: auto; }
     .features-grid { grid-template-columns: 1fr; }
     .trust-row { gap: 32px; font-size: 15px; }
@@ -1337,6 +1338,7 @@
     .notif .s { display: none; }
     .notif .v { font-size: 11px; margin-left: 2px; padding-left: 6px; white-space: nowrap; }
     .notif.one { top: 10px; left: 6px; }
+    /* On phones, gutter is too narrow for a left-floated pill — keep it on the card */
     .notif.two { left: 4px; bottom: 80px; }
     /* Third pill sits below the image, centered. Constrained to viewport width */
     .notif.three {
