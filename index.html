@@ -480,23 +480,28 @@
   .pulse-node { animation: pulse-node 2.4s ease-out infinite; transform-origin: center; transform-box: fill-box; }
 
   /* Features */
-  .features { padding: 96px 32px; }
-  /* Header: full-width S-curve image as backdrop, copy overlays top-left */
+  .features { padding: 0 0 96px; }
+  /* Header: full-bleed S-curve image as backdrop, copy overlays top-left.
+     .features-head sits OUTSIDE .wrap so the image fills the entire section
+     width edge-to-edge */
   .features-head {
     position: relative;
-    margin-bottom: 32px;
+    width: 100%;
+    margin-bottom: 48px;
   }
   .features-bg {
     display: block;
     width: 100%;
     height: auto;
   }
-  .features-copy {
+  .features-overlay {
     position: absolute;
     top: 8%;
-    left: 4%;
-    max-width: 46%;
+    left: 0; right: 0;
     z-index: 2;
+  }
+  .features-copy {
+    max-width: 540px;
   }
   .features-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
@@ -726,7 +731,8 @@
     .notif.three { right: -8px; top: 16px; }
     .features-grid { grid-template-columns: 1fr; }
     .features-head { margin-bottom: 24px; }
-    .features-copy { top: 6%; left: 4%; max-width: 50%; }
+    .features-overlay { top: 6%; }
+    .features-copy { max-width: 60%; }
     .trust-row { gap: 32px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
     .stats { grid-template-columns: 1fr 1fr; grid-template-rows: 100px 1fr 1fr; }
@@ -1398,15 +1404,18 @@
     .stats .card.addresses .planet { width: 160px; height: 160px; top: 24px; right: -36px; }
 
     /* Features */
-    .features { padding: 56px 16px; }
-    /* Phone: text stacks above image so it stays readable */
-    .features-head { margin-bottom: 16px; }
-    .features-copy {
-      position: static;
-      max-width: none;
-      top: auto; left: auto;
-      margin-bottom: 24px;
+    .features { padding: 0 0 56px; }
+    /* Phone: flex column-reverse puts text ABOVE the image so it stays readable */
+    .features-head {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 16px;
     }
+    .features-overlay {
+      position: static;
+      padding: 24px 0 16px;
+    }
+    .features-copy { max-width: none; }
     .features-grid { gap: 16px; margin-top: 32px; }
     .feature { padding: 22px; }
     .feature-t { font-size: 19px; }
@@ -1748,14 +1757,18 @@
 </section>
 
 <section class="features">
-  <div class="wrap">
-    <div class="features-head">
-      <img class="features-bg" src="assets/platform-flow.png" alt="Continuous compliance enforcement flow" />
-      <div class="features-copy">
-        <div class="features-eb">PLATFORM</div>
-        <h2 class="features-h">Patent-Pending Hard-Blocking Controls<br/>One compliance-enforcement layer.</h2>
+  <div class="features-head">
+    <img class="features-bg" src="assets/platform-flow.png" alt="Continuous compliance enforcement flow" />
+    <div class="features-overlay">
+      <div class="wrap">
+        <div class="features-copy">
+          <div class="features-eb">PLATFORM</div>
+          <h2 class="features-h">Patent-Pending Hard-Blocking Controls<br/>One compliance-enforcement layer.</h2>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="wrap">
     <div class="features-grid">
       <div class="feature">
         <div class="feature-num">01 · ENFORCE</div>
