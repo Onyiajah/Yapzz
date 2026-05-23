@@ -481,29 +481,23 @@
 
   /* Features */
   .features { padding: 96px 32px; }
-  /* Two-column header: copy on left, S-curve graphic on right */
+  /* Header area: S-curve flow graphic sits as background, copy overlays on the left */
   .features-head {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 32px;
-    align-items: start;
-    margin-bottom: 56px;
-  }
-  .features-visual {
     position: relative;
-    /* Negative right margin lets the flow graphic bleed toward the page edge */
-    margin-right: -32px;
-    background: linear-gradient(135deg, #FFF8EC 0%, #FFEFD8 100%);
-    border-radius: 24px;
-    padding: 28px 32px;
-    border: 1px solid #F5D9B0;
+    min-height: 380px;
+    padding: 56px 0;
+    margin-bottom: 32px;
+    background-image: url('assets/platform-flow.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
   }
-  .features-visual img {
-    display: block;
-    width: 100%;
-    height: auto;
-    /* Orange-tinted shadow traces only the S-curve, not the surrounding whitespace */
-    filter: drop-shadow(0 10px 22px rgba(242, 127, 13, 0.18));
+  .features-copy {
+    max-width: 540px;
+    position: relative;
+    z-index: 2;
   }
   .features-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
@@ -732,8 +726,14 @@
     .notif.two { left: 0; }
     .notif.three { right: -8px; top: 16px; }
     .features-grid { grid-template-columns: 1fr; }
-    .features-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
-    .features-visual { margin-right: 0; }
+    /* On tablet: shrink the bg image so it doesn't crowd the text on the left */
+    .features-head {
+      min-height: 320px;
+      padding: 40px 0;
+      margin-bottom: 24px;
+      background-size: 65% auto;
+      background-position: right 0 center;
+    }
     .trust-row { gap: 32px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
     .stats { grid-template-columns: 1fr 1fr; grid-template-rows: 100px 1fr 1fr; }
@@ -1406,6 +1406,14 @@
 
     /* Features */
     .features { padding: 56px 16px; }
+    /* Phone: image moves below the copy so neither competes for space */
+    .features-head {
+      min-height: auto;
+      padding: 0 0 16px;
+      background-position: center bottom;
+      background-size: 100% auto;
+      padding-bottom: 140px;
+    }
     .features-grid { gap: 16px; margin-top: 32px; }
     .feature { padding: 22px; }
     .feature-t { font-size: 19px; }
@@ -1748,13 +1756,10 @@
 
 <section class="features">
   <div class="wrap">
-    <div class="features-head">
+    <div class="features-head" role="img" aria-label="Continuous compliance enforcement flow">
       <div class="features-copy">
         <div class="features-eb">PLATFORM</div>
         <h2 class="features-h">Patent-Pending Hard-Blocking Controls<br/>One compliance-enforcement layer.</h2>
-      </div>
-      <div class="features-visual">
-        <img src="assets/platform-flow.png" alt="Continuous compliance enforcement flow" />
       </div>
     </div>
     <div class="features-grid">
