@@ -480,19 +480,22 @@
   .pulse-node { animation: pulse-node 2.4s ease-out infinite; transform-origin: center; transform-box: fill-box; }
 
   /* Features */
-  .features { padding: 0 0 96px; }
+  .features { padding: 0 0 56px; }
   /* Header: full-bleed S-curve image as backdrop, copy overlays top-left.
-     .features-head sits OUTSIDE .wrap so the image fills the entire section
-     width edge-to-edge */
+     overflow:hidden + negative margin-top on .features-bg crops the image's
+     top whitespace so the bar/curve butts up against the section above */
   .features-head {
     position: relative;
     width: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
+    overflow: hidden;
   }
   .features-bg {
     display: block;
     width: 100%;
     height: auto;
+    margin-top: -5%;
+    margin-bottom: -4%;
   }
   .features-overlay {
     position: absolute;
@@ -1404,16 +1407,17 @@
     .stats .card.addresses .planet { width: 160px; height: 160px; top: 24px; right: -36px; }
 
     /* Features */
-    .features { padding: 0 0 56px; }
+    .features { padding: 0 0 40px; }
     /* Phone: flex column-reverse puts text ABOVE the image so it stays readable */
     .features-head {
       display: flex;
       flex-direction: column-reverse;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
+    .features-bg { margin-top: -3%; margin-bottom: -3%; }
     .features-overlay {
       position: static;
-      padding: 24px 0 16px;
+      padding: 24px 0 8px;
     }
     .features-copy { max-width: none; }
     .features-grid { gap: 16px; margin-top: 32px; }
