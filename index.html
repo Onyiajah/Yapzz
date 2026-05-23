@@ -1380,8 +1380,21 @@
     /* Anchor to the right edge of the bottom card so the pill extends LEFT
        into the plain background rather than overflowing the viewport */
     .notif.two { right: 4px; bottom: 16px; left: auto; }
-    /* Platform-section pill hidden on phones — too cramped at this width */
-    .notif.platform { display: none; }
+    /* Platform-section pill on phones: positioned over the image area
+       (which sits at the bottom of .features-head due to column-reverse) */
+    .notif.platform {
+      display: inline-flex;
+      top: auto; left: auto;
+      bottom: 8%;
+      right: 4%;
+      padding: 5px 10px 5px 4px;
+      gap: 6px;
+      max-width: calc(100vw - 24px);
+    }
+    .notif.platform .ic { width: 24px; height: 24px; }
+    .notif.platform .ic svg { width: 12px; height: 12px; }
+    .notif.platform .t { font-size: 10px; }
+    .notif.platform .v { display: none; }
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
