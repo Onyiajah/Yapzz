@@ -481,6 +481,24 @@
 
   /* Features */
   .features { padding: 96px 32px; }
+  /* Two-column header: copy on left, S-curve graphic on right */
+  .features-head {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+  .features-visual {
+    position: relative;
+    /* Negative right margin lets the flow graphic bleed toward the page edge */
+    margin-right: -32px;
+  }
+  .features-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   .features-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     margin-top: 48px;
@@ -510,7 +528,7 @@
   .features-h {
     font-size: clamp(32px, 4vw, 48px); font-weight: 700;
     letter-spacing: -.025em; line-height: 1.05;
-    margin: 14px 0 0; max-width: 720px;
+    margin: 14px 0 0;
   }
 
   /* Architecture section — "How sealing works" mini moment */
@@ -708,6 +726,8 @@
     .notif.two { left: 0; }
     .notif.three { right: -8px; top: 16px; }
     .features-grid { grid-template-columns: 1fr; }
+    .features-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
+    .features-visual { margin-right: 0; }
     .trust-row { gap: 32px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
     .stats { grid-template-columns: 1fr 1fr; grid-template-rows: 100px 1fr 1fr; }
@@ -1722,8 +1742,15 @@
 
 <section class="features">
   <div class="wrap">
-    <div class="features-eb">PLATFORM</div>
-    <h2 class="features-h">Patent-Pending Hard-Blocking Controls<br/>One compliance-enforcement layer.</h2>
+    <div class="features-head">
+      <div class="features-copy">
+        <div class="features-eb">PLATFORM</div>
+        <h2 class="features-h">Patent-Pending Hard-Blocking Controls<br/>One compliance-enforcement layer.</h2>
+      </div>
+      <div class="features-visual">
+        <img src="assets/platform-flow.png" alt="Continuous compliance enforcement flow" />
+      </div>
+    </div>
     <div class="features-grid">
       <div class="feature">
         <div class="feature-num">01 · ENFORCE</div>
