@@ -1578,6 +1578,129 @@
     .md\:text-7xl { font-size: 4.5rem; }
   }
 
+  /* ============================================================
+     DARK MODE — activated when the user's OS / browser is set to
+     prefers-color-scheme: dark. Keeps the warm brand palette;
+     orange stays orange, cream sections swap to warm-dark.
+     ============================================================ */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #FFEFD8;
+      --ink-2: #d4c4b0;
+      --ink-3: #a89a85;
+      --ink-4: #8e7e69;
+      --paper: #1a0e00;
+      --paper-2: #261a0c;
+      --line: #3a2a18;
+      --line-2: #4a3a28;
+    }
+
+    html, body { background: #1a0e00; color: #FFEFD8; }
+
+    /* Header */
+    header { background: rgba(26, 14, 0, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid #3a2a18; }
+    .nav-links a:hover { color: var(--orange); }
+    .sign-in:hover { color: var(--orange); }
+    .icon-btn:hover { background: #261a0c; }
+
+    /* Hero — mirror of the warm cream gradient in warm dark */
+    .hero-section {
+      background: linear-gradient(90deg, #2a1800 0%, #1f1208 30%, #15100a 60%, #0d0700 100%);
+    }
+    .btn-outline { border-color: var(--ink); color: var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: #1a0e00; }
+    .media-card { background: #261a0c; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.55), 0 6px 16px rgba(0,0,0,0.35); }
+
+    /* Trust band */
+    .trust { background: linear-gradient(180deg, #0d0700 0%, #15100a 60%, #1f1208 100%); }
+    .trust-row .item:hover { color: var(--ink); }
+
+    /* Pillar cards (replaced stats grid) */
+    .pillar {
+      background: #261a0c;
+      border-color: #3a2a18;
+      box-shadow: 0 24px 50px -28px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .pillar:hover {
+      border-color: #5a4a30;
+      box-shadow: 0 30px 60px -28px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.35);
+    }
+
+    /* Stats cards (legacy) */
+    .stats .card {
+      background: #261a0c;
+      border-color: #3a2a18;
+      box-shadow: 0 24px 50px -28px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .stats .card:hover { border-color: #4a3a28; }
+
+    /* Features (platform) section */
+    .features { background: #1a0e00; }
+    /* The S-curve image has a stark white background. Invert + hue-rotate
+       turns white -> dark while keeping the orange roughly orange. */
+    .features-bg { filter: invert(1) hue-rotate(180deg); }
+
+    /* Feature cards */
+    .feature {
+      background: #261a0c;
+      border-color: #3a2a18;
+    }
+
+    /* Architecture */
+    .architecture {
+      background: linear-gradient(90deg, #0d0700 0%, #15100a 40%, #1f1208 70%, #2a1800 100%);
+    }
+    .architecture-points li { color: var(--ink-2); }
+
+    /* Use cases */
+    .use-cases { background: #1a0e00; }
+    .uc-pill { background: #261a0c; color: var(--ink-2); }
+    .uc-pill:hover { border-color: #4a3a28; }
+    /* Active state stays orange (already set in base CSS) */
+
+    /* Industries */
+    .industries {
+      background: linear-gradient(180deg, #1a0e00 0%, #1f1208 60%, #261a0c 100%);
+    }
+    .industries-right { background: #261a0c; }
+    .industries-right .img-shade {
+      background: linear-gradient(to right, rgba(26,14,0,0.6) 0%, rgba(26,14,0,0) 40%);
+    }
+    .industries-right .partner-logo { color: var(--ink); }
+    .industries-right .partner-desc { color: var(--ink-3); }
+
+    /* Benefits / pilot */
+    .benefits-band { background: linear-gradient(180deg, #261a0c 0%, #1f1208 100%); }
+    .pilot-card {
+      background: linear-gradient(135deg, #2a1800 0%, #1f1208 100%);
+      border-color: #3a2a18;
+    }
+    .pilot-media { background: #1a0e00; }
+    .pilot-media .fade { background: linear-gradient(to right, rgba(38,26,12,0.6) 0%, rgba(38,26,12,0) 40%); }
+
+    /* CTA band */
+    .cta {
+      background: linear-gradient(135deg, #2a1800 0%, #1f1208 100%);
+      border-color: #3a2a18;
+      color: var(--ink);
+    }
+    .cta h2 { color: var(--ink); }
+    .cta .ghost { border-color: var(--ink); color: var(--ink); }
+    .cta .ghost:hover { background: var(--ink); color: #1a0e00; }
+
+    /* Footer */
+    footer { background: #0d0700; border-top-color: #3a2a18; }
+    .foot-bot { border-top-color: #3a2a18; }
+
+    /* Architecture image is already on a dark scene, but ensure the radial
+       glow behind it stays warm */
+    .architecture-visual::before {
+      background:
+        radial-gradient(circle at 50% 50%, rgba(20, 40, 80, 0.18) 0%, transparent 65%),
+        radial-gradient(circle at 50% 50%, rgba(242, 127, 13, 0.15) 0%, transparent 70%);
+    }
+  }
+
 </style>
 </head>
 <body>
