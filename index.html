@@ -1608,6 +1608,101 @@
     /* .hero-tag and .accent stay orange (work on both light and dark) */
     .btn-outline { border-color: #FFFFFF; color: #FFFFFF; }
     .btn-outline:hover { background: #FFFFFF; color: #000000; }
+
+    /* Body background */
+    html, body { background: #000000; color: #FFFFFF; }
+
+    /* Trust band */
+    .trust { background: #000000; }
+    .trust-row .item { color: #FFFFFF; }
+    .trust-row .item:hover { color: #FFFFFF; }
+    /* .trust-label keeps its orange gradient */
+
+    /* Pillar cards */
+    .pillar {
+      background: #1a1a1a;
+      border-color: #2a2a2a;
+      box-shadow: 0 24px 50px -28px rgba(0,0,0,0.5);
+    }
+    .pillar:hover { border-color: #3a3a3a; }
+    .pillar h3 { color: #FFFFFF; }
+    .pillar p { color: #d4c4b0; }
+
+    /* Features / platform section */
+    .features { background: #000000; }
+    /* S-curve image has white background; invert + hue-rotate keeps the orange
+       roughly orange while flipping white -> dark */
+    .features-bg { filter: invert(1) hue-rotate(180deg); }
+    .features-h { color: #FFFFFF; }
+    /* .features-eb already orange */
+    .feature { background: #1a1a1a; border-color: #2a2a2a; }
+    .feature-t { color: #FFFFFF; }
+    .feature-b { color: #d4c4b0; }
+
+    /* Architecture */
+    .architecture {
+      background: linear-gradient(90deg, #000000 0%, #000000 100%);
+    }
+    .architecture-h { color: #FFFFFF; }
+    .architecture-sub { color: #d4c4b0; }
+    .architecture-points li { color: #FFFFFF; }
+    .architecture-points .marker { background: var(--orange); }
+
+    /* Use cases */
+    .use-cases { background: #000000; }
+    .use-cases h2 { color: #FFFFFF; }
+    .uc-pill { background: #1a1a1a; color: #d4c4b0; }
+    .uc-pill:hover { border-color: #2a2a2a; }
+    /* Active uc-pill stays orange */
+    .uc-detail-text { color: #FFFFFF; }
+    .uc-detail-icon { color: #FFFFFF; }
+
+    /* Industries */
+    .industries {
+      background: #000000;
+    }
+    .ind-tab-title { color: #FFFFFF; }
+    .ind-tab-desc { color: #d4c4b0; }
+    .ind-tab-icon span { background: #d4c4b0; }
+    .ind-tab.is-active .ind-tab-icon span { background: var(--orange); }
+    .ind-tab-line { background: #2a2a2a; }
+    .ind-tab.is-active .ind-tab-line { background: #FFFFFF; }
+    .industries-right { background: #1a1a1a; }
+    .industries-right .partner-logo { color: #FFFFFF; }
+    .industries-right .partner-desc { color: #d4c4b0; }
+
+    /* Benefits + Pilot */
+    .benefits-band { background: #000000; }
+    .benefit { border-left-color: #2a2a2a; }
+    .benefit:not(:first-child) { border-top-color: #2a2a2a; }
+    .benefit-head h3 { color: #FFFFFF; }
+    .benefit-body { color: #d4c4b0; }
+    .pilot-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+      border-color: #2a2a2a;
+    }
+    .pilot-copy h2 { color: #FFFFFF; }
+    .pilot-copy p { color: #d4c4b0; }
+    .pilot-media { background: #0a0a0a; }
+    .pilot-media .fade { background: linear-gradient(to right, rgba(26,26,26,0.6) 0%, rgba(26,26,26,0) 40%); }
+
+    /* CTA band */
+    .cta {
+      background: #1a1a1a;
+      border-color: #2a2a2a;
+    }
+    .cta h2 { color: #FFFFFF; }
+    .cta .ghost { border-color: #FFFFFF; color: #FFFFFF; }
+    .cta .ghost:hover { background: #FFFFFF; color: #000000; }
+
+    /* Footer */
+    footer { background: #000000; border-top-color: #1a1a1a; }
+    footer .brand img { filter: invert(1) hue-rotate(180deg); }
+    .foot-blurb { color: #d4c4b0; }
+    .foot-h { color: #FFFFFF; }
+    .foot-col a { color: #d4c4b0; }
+    .foot-col a:hover { color: var(--orange); }
+    .foot-bot { color: #d4c4b0; border-top-color: #1a1a1a; }
   }
 
 </style>
