@@ -1583,6 +1583,7 @@
      Activates when the user's OS / browser is set to dark.
      ============================================================ */
   @media (prefers-color-scheme: dark) {
+    /* Header */
     header {
       background: #000000;
       border-bottom: 1px solid #1a1a1a;
@@ -1597,6 +1598,16 @@
     .sign-in:hover { color: var(--orange); }
     .icon-btn { color: #FFFFFF; }
     .icon-btn:hover { background: #1a1a1a; }
+
+    /* Hero — black on the left (copy side), white on the right (image side) */
+    .hero-section {
+      background: linear-gradient(90deg, #000000 0%, #000000 35%, #FFFFFF 65%, #FFFFFF 100%);
+    }
+    .hero-copy h1 { color: #FFFFFF; }
+    .hero-copy .lede { color: #d4c4b0; }
+    /* .hero-tag and .accent stay orange (work on both light and dark) */
+    .btn-outline { border-color: #FFFFFF; color: #FFFFFF; }
+    .btn-outline:hover { background: #FFFFFF; color: #000000; }
   }
 
 </style>
