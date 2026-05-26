@@ -1628,9 +1628,9 @@
 
     /* Features / platform section */
     .features { background: #000000; }
-    /* S-curve image has white background; invert + hue-rotate keeps the orange
-       roughly orange while flipping white -> dark */
-    .features-bg { filter: invert(1) hue-rotate(180deg); }
+    /* S-curve image rendered with its natural colors — its white background
+       will appear as a light band on the dark page, which is acceptable since
+       the inverted-filter approach gave the image a black-overlay look */
     .features-h { color: #FFFFFF; }
     /* .features-eb already orange */
     .feature { background: #1a1a1a; border-color: #2a2a2a; }
