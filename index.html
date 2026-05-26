@@ -1639,17 +1639,22 @@
     .feature-t { color: #FFFFFF; }
     .feature-b { color: #d4c4b0; }
 
-    /* Architecture */
+    /* Architecture — image is on the LEFT, copy on the RIGHT, so the
+       gradient mirrors hero: white on the left (image area), black on
+       the right (copy area) */
     .architecture {
-      background: linear-gradient(90deg, #000000 0%, #000000 100%);
+      background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 35%, #000000 65%, #000000 100%);
     }
     .architecture-h { color: #FFFFFF; }
     .architecture-sub { color: #d4c4b0; }
     .architecture-points li { color: #FFFFFF; }
     .architecture-points .marker { background: var(--orange); }
 
-    /* Use cases */
-    .use-cases { background: #000000; }
+    /* Use cases — copy/pills on the LEFT, uc-card on the RIGHT.
+       Same hero pattern: black left, white right */
+    .use-cases {
+      background: linear-gradient(90deg, #000000 0%, #000000 35%, #FFFFFF 65%, #FFFFFF 100%);
+    }
     .use-cases h2 { color: #FFFFFF; }
     .uc-pill { background: #1a1a1a; color: #d4c4b0; }
     .uc-pill:hover { border-color: #2a2a2a; }
@@ -1657,9 +1662,9 @@
     .uc-detail-text { color: #FFFFFF; }
     .uc-detail-icon { color: #FFFFFF; }
 
-    /* Industries */
+    /* Industries — tabs on the LEFT, image on the RIGHT. Hero pattern. */
     .industries {
-      background: #000000;
+      background: linear-gradient(90deg, #000000 0%, #000000 35%, #FFFFFF 65%, #FFFFFF 100%);
     }
     .ind-tab-title { color: #FFFFFF; }
     .ind-tab-desc { color: #d4c4b0; }
@@ -1677,8 +1682,9 @@
     .benefit:not(:first-child) { border-top-color: #2a2a2a; }
     .benefit-head h3 { color: #FFFFFF; }
     .benefit-body { color: #d4c4b0; }
+    /* Pilot card — copy LEFT, media RIGHT. Hero pattern inside the card. */
     .pilot-card {
-      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+      background: linear-gradient(90deg, #000000 0%, #000000 40%, #FFFFFF 70%, #FFFFFF 100%);
       border-color: #2a2a2a;
     }
     .pilot-copy h2 { color: #FFFFFF; }
