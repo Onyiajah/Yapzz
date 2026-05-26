@@ -1578,6 +1578,25 @@
     .md\:text-7xl { font-size: 4.5rem; }
   }
 
+  /* ============================================================
+     DARK MODE — header only (incremental rollout)
+     Activates when the user's OS / browser is set to dark.
+     ============================================================ */
+  @media (prefers-color-scheme: dark) {
+    header {
+      background: #1a0e00;
+      border-bottom: 1px solid #3a2a18;
+    }
+    /* Logo is dark-on-transparent; invert so it reads as light on dark */
+    header .brand img { filter: invert(1) brightness(1.1); }
+    .nav-links a { color: #d4c4b0; }
+    .nav-links a:hover { color: var(--orange); }
+    .sign-in { color: #d4c4b0; }
+    .sign-in:hover { color: var(--orange); }
+    .icon-btn { color: #d4c4b0; }
+    .icon-btn:hover { background: #261a0c; }
+  }
+
 </style>
 </head>
 <body>
