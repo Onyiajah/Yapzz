@@ -1618,8 +1618,13 @@
     .trust-row .item:hover { color: #FFFFFF; }
     /* .trust-label keeps its orange gradient */
 
-    /* Pillar cards — kept in light theme in dark mode, like the CTA card.
-       Warm white surface reads as a deliberate focal stack on the dark page */
+    /* Pillar cards — use the CTA card's warm cream gradient in dark mode
+       so they share the same warm focal-card treatment */
+    .pillar {
+      background: linear-gradient(135deg, #FFEFD8 0%, #FFE2BD 100%);
+      border-color: #F5D9B0;
+    }
+    .pillar:hover { border-color: #EAC58A; }
 
     /* Features / platform section */
     .features { background: #000000; }
