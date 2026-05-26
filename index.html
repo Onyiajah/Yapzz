@@ -1587,7 +1587,10 @@
       background: #000000;
       border-bottom: 1px solid #1a1a1a;
     }
-    /* Logo kept at its original colors (no filter applied) */
+    /* Flip the black "YapzZ" wordmark to white; orange icon stays orange.
+       invert(1) turns black -> white and orange -> blue; hue-rotate(180deg)
+       rotates the blue back to orange while leaving the now-white text alone */
+    header .brand img { filter: invert(1) hue-rotate(180deg); }
     .nav-links a { color: #FFFFFF; }
     .nav-links a:hover { color: var(--orange); }
     .sign-in { color: #FFFFFF; }
