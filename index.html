@@ -30,12 +30,102 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "YapzZ",
-  "legalName": "YapzZ LLC",
-  "url": "https://yapzz.com/",
-  "logo": "https://yapzz.com/assets/yapzz-logo.png",
-  "description": "The compliance-enforcement layer for regulated materials. Patent-pending hard-blocking technology stops non-compliant transactions before they commit."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://yapzz.com/#organization",
+      "name": "YapzZ",
+      "legalName": "YapzZ LLC",
+      "url": "https://yapzz.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yapzz.com/assets/yapzz-logo.png"
+      },
+      "image": "https://yapzz.com/assets/og-image.png",
+      "description": "The compliance-enforcement layer for regulated materials. Patent-pending hard-blocking technology stops non-compliant transactions before they commit.",
+      "email": "sales@yapzz.com",
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "Regulated materials compliance",
+        "Chain of custody enforcement",
+        "Magazine capacity management",
+        "License and authorized personnel controls",
+        "Inspection and audit lockouts",
+        "Explosives compliance",
+        "Mining compliance",
+        "Energy services compliance",
+        "Commercial pyrotechnics compliance",
+        "Logistics compliance"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://yapzz.com/#website",
+      "url": "https://yapzz.com/",
+      "name": "YapzZ",
+      "description": "Enforcement infrastructure for regulated materials",
+      "publisher": { "@id": "https://yapzz.com/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "YapzZ Compliance Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Patent-pending hard-blocking compliance enforcement for regulated-material operators. Validates authority, licensing, storage limits, inspections, and custody status before transactions can commit.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "category": "Pilot access — single facility, 30 days"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is YapzZ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YapzZ is the compliance-enforcement layer for regulated materials. Patent-pending hard-blocking technology validates authority, licensing, storage limits, inspections, and custody status before regulated-material transactions can commit. Approved records are sealed with correction history and audit-ready traceability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is YapzZ built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "YapzZ is built for operators handling explosives, mining, energy services, commercial pyrotechnics, logistics, and regulated materials — anyone with custody, storage, transfer, receiving, or audit requirements on controlled materials."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does YapzZ differ from inventory systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inventory systems track what already happened. YapzZ uses patent-pending hard-blocking logic to decide what is allowed to happen next — before the transaction can commit. The platform stops non-compliant movements at source rather than flagging them retroactively in an audit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the YapzZ pilot include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stand up enforcement, sealing, and chain-of-custody for one site in 30 days with zero infrastructure changes. Audit on day 31."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What hard-blocking controls does YapzZ provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four enforcement pillars: License & Authorized Personnel Blocks (expired licenses, unapproved users, missing authority checks), Magazine Capacity Blocks (storage limits, regulated-material thresholds), Inspection & Audit Lockouts (overdue inspections, incomplete compliance records), and Patent-Pending Hard Blocking logic at the core."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 

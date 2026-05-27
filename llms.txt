@@ -1,0 +1,43 @@
+# YapzZ
+
+> YapzZ is the compliance-enforcement layer for regulated materials. Patent-pending hard-blocking technology validates authority, licensing, storage limits, inspections, and custody status before regulated-material transactions can commit. Approved records are sealed with correction history and audit-ready traceability.
+
+## What YapzZ does
+
+- **Blocks non-compliant transactions before they commit.** Patent-pending hard-blocking logic checks licensing, authorized personnel, storage limits, inspection status, audit requirements, and custody status before regulated materials can move.
+- **Locks approved records with correction history.** Approved transactions are sealed into an audit-ready record. Corrections do not erase history — they create a visible amendment trail.
+- **Maintains custody from shipment to acceptance.** Transfers, storage moves, field handoffs, and in-transit shipments stay connected until the receiving party accepts custody.
+
+## Built for
+
+Operators in: explosives, mining, energy services, commercial pyrotechnics, logistics, regulated materials.
+
+## Platform pillars
+
+- **Patent-Pending Hard Blocking** — compliance enforcement logic designed to stop non-compliant transactions before they commit.
+- **License & Authorized Personnel Blocks** — blocks transactions when licenses are expired, users are not approved, or required authority checks are not met.
+- **Magazine Capacity Blocks** — prevents movements that would exceed configured magazine limits, storage rules, or regulated-material thresholds.
+- **Inspection & Audit Lockouts** — stops transactions when required inspections, audit checks, or compliance records are overdue or incomplete.
+
+## Infrastructure layer
+
+- **Patent-Pending Logic Core** — deterministic execution environment that evaluates regulatory logic in isolation, ensuring every operational movement is pre-validated against jurisdiction-specific mandates.
+- **Unified Traceability Fabric** — interconnected graph of custody records that links material origin, handler history, and regulatory approvals into a single, navigable source of truth.
+- **Secure Data Architecture** — encrypted compliance records, role-based access control, immutable audit trails, and tenant-isolated data architecture.
+
+## How YapzZ differs from inventory systems
+
+Inventory systems track what already happened. YapzZ uses patent-pending hard-blocking logic to decide what is allowed to happen next — before the transaction can commit. No silent edits. No missing authority checks. No retroactive audits.
+
+## Pilot
+
+Stand up enforcement, sealing, and chain-of-custody for one site in 30 days with zero infrastructure changes. Audit on day 31.
+
+## Contact
+
+- Pilot access: sales@yapzz.com
+- Book a demo: https://outlook.office365.com/owa/calendar/YapzZ@dceiq.com/bookings/
+
+## Company
+
+YapzZ LLC. Compliance enforcement infrastructure for regulated materials. Patent pending.
