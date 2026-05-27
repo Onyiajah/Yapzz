@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
-  
-  <rect x="3" y="9" width="9" height="6" rx="1"></rect>
-  <rect x="12" y="9" width="9" height="6" rx="1"></rect>
-  <line x1="9" y1="12" x2="15" y2="12"></line>
-</svg>
