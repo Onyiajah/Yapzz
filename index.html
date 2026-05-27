@@ -362,11 +362,14 @@
   }
   .trust-row {
     display: flex; justify-content: center; align-items: center;
-    gap: 56px; flex-wrap: wrap;
+    gap: 22px; flex-wrap: wrap;
     font-family: 'Inter', sans-serif;
     font-weight: 700; font-size: 17px;
     color: var(--ink-2); letter-spacing: -.005em;
     margin-bottom: 56px;
+  }
+  .trust-row .sep {
+    color: var(--ink-3); opacity: 0.5; font-weight: 400;
   }
   .trust-row .item { opacity: .55; transition: opacity .15s ease, color .15s ease; }
   .trust-row .item:hover { opacity: 1; color: var(--ink); }
@@ -751,7 +754,7 @@
     .features-head { margin-bottom: 0; }
     .features-overlay { top: 48%; }
     .features-copy { max-width: 60%; }
-    .trust-row { gap: 32px; font-size: 15px; }
+    .trust-row { gap: 16px; font-size: 15px; }
     .trust { padding: 56px 16px 72px; }
     .stats { grid-template-columns: 1fr 1fr; grid-template-rows: 100px 1fr 1fr; }
     .stats .card.cost { grid-column: 1; grid-row: 1; max-width: none; }
@@ -1404,7 +1407,7 @@
 
     /* Trust band + stats — must override 980px stats rules above */
     .trust { padding: 40px 16px 56px; }
-    .trust-row { gap: 18px 28px; font-size: 13px; margin-bottom: 36px; }
+    .trust-row { gap: 8px 14px; font-size: 13px; margin-bottom: 36px; }
     .stats { grid-template-columns: 1fr; grid-template-rows: auto; gap: 14px; }
     .stats .card.cost,
     .stats .card.tx,
@@ -1616,6 +1619,7 @@
     .trust { background: #000000; }
     .trust-row .item { color: #FFFFFF; }
     .trust-row .item:hover { color: #FFFFFF; }
+    .trust-row .sep { color: #d4c4b0; opacity: 0.4; }
     /* .trust-label keeps its orange gradient */
 
     /* Pillar cards — use the CTA card's warm cream gradient in dark mode
@@ -1768,10 +1772,15 @@
     <div class="trust-label">BUILT FOR</div>
     <div class="trust-row">
       <span class="item">EXPLOSIVES</span>
+      <span class="sep" aria-hidden="true">·</span>
       <span class="item">MINING</span>
+      <span class="sep" aria-hidden="true">·</span>
       <span class="item">ENERGY SERVICES</span>
-      <span class="item">FIREWORKS</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <span class="item">COMMERCIAL PYROTECHNICS</span>
+      <span class="sep" aria-hidden="true">·</span>
       <span class="item">LOGISTICS</span>
+      <span class="sep" aria-hidden="true">·</span>
       <span class="item">REGULATED MATERIALS</span>
     </div>
 
